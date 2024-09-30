@@ -1,2 +1,4 @@
-# case_management_mvh
-Fallverwaltung Modellvorhaben Genomsequenzierung
+# Fallverwaltung Modellvorhaben Genomsequenzierung
+
+Beispielprojekt in REDCap als Vorlage zur Anpassung an lokale Gegebenheiten
+
