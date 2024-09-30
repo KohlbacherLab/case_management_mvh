@@ -11,4 +11,6 @@ Das Data Dictionary ist zusätzlich in verschiedenen Formaten abgelegt:
 Zur einfacheren Bedienung können optional externe Module installiert und aktiviert werden:
 - Instance Select: Auswahl einer Fallnummer für Datenupload
 - Instance Table: Eingabe mehrerer Fallnummern pro Patient
-- Orca Search Module: Suchmaske für verschiedene Felder
+- Orca Search Module: Suchmaske für verschiedene Felder ([Einstellungen](FallverwaltungModellvorhaben_ModuleSettingsExport.zip))
+  
+![Module](Screenshot_MVH_Module.png)
