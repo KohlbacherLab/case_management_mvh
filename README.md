@@ -8,7 +8,10 @@ Das Data Dictionary ist zusätzlich in verschiedenen Formaten abgelegt:
 - [CSV Datei](FallverwaltungModellvorhaben_DataDictionary.csv) (Strichpunkt als Separator)
 - [PDF Datei](Fallverwaltung_Modellvorhaben_Genomsequenzierung_REDCap.pdf)
  
-Zur einfacheren Bedienung können optional externe Module installiert und aktiviert werden:
+Hinweise zum Data Dictionary:
+- Automatisch eingelesene Felder sind mit dem Action Tag @READONLY versehen, bitte anpassen!
+
+Zur einfacheren Bedienung in REDCap können optional externe Module installiert und aktiviert werden:
 - Instance Select: Auswahl einer Fallnummer für Datenupload
 - Instance Table: Eingabe mehrerer Fallnummern pro Patient
 - Orca Search Module: Suchmaske für verschiedene Felder ([Einstellungen](FallverwaltungModellvorhaben_ModuleSettingsExport.zip))
