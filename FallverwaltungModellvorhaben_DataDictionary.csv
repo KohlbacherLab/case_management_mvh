@@ -1,0 +1,48 @@
+﻿"Variable / Field Name";"Form Name";"Section Header";"Field Type";"Field Label";"Choices, Calculations, OR Slider Labels";"Field Note";"Text Validation Type OR Show Slider Number";"Text Validation Min";"Text Validation Max";Identifier?;"Branching Logic (Show field only if...)";"Required Field?";"Custom Alignment";"Question Number (surveys only)";"Matrix Group Name";"Matrix Ranking?";"Field Annotation"
+record_id;id;;text;ID;;;;;;;;;;;;;
+pat_id;id;;text;SAP-ID;;;;;;;;y;;;;;"# ID des Patienten im Primärsystem (wird automatisch importiert)
+@READONLY"
+fallnummern_desc;id;;descriptive;Fallnummern;;;;;;;;;;;;;" @INSTANCETABLE=fallnummer
+@INSTANCETABLE_VARLIST=case_id
+@INSTANCETABLE_HIDEINSTANCECOL
+@INSTANCETABLE_ADDBTNLABEL='Neue Fallnummer'"
+kvnr;id;Krankenversichertennummer;text;"KVNR unveränderbarer Teil";;;;;;;;y;;;;;"# Import aus Clinical Data Lake (NCIR/VERNR)"
+kvnr_ik;id;;text;"KVNR Institutionskennzeichen";;;;;;;;y;;;;;
+network;netzwerk;;dropdown;Netzwerk;"1, UKT-2024-ZE1-2973 | 2, UKT-2024-IM1-2975 | 3, UKT-2024-IM1-2976 | 4, UKT-2024-IM1-2977 | 5, UKT-2024-AH3-2971 | 6, UKT-2024-AH3-2972 | 7, UKT-2024-AH3-2974 | 8, ohne Zuordnung | 9, UKT-2023-IM1-2739 | 10, UKT-2017-NE6-2572";;;;;;;;;;;;
+network_title;netzwerk;;text;"Netzwerk Titel";;;;;;;;;;;;;" @CALCTEXT(if([network]='1', 'Netzwerk Seltene Erkrankungen', 
+if([network]='2', 'Deutsches Netzwerk für Personalisierte Medizin', 
+if([network]='3', 'Nationales Centrum für Tumorerkrankungen / Deutsches Krebskonsortium', 
+if([network]='4', 'Nationales Netzwerk für genomische Medizin', 
+if([network]='5', 'Deutsches Konsortium Familiärer Brust- und Eierstockkrebs', 
+if([network]='6', 'Deutsches Konsortium für Familiären Darmkrebs', 
+if([network]='7', 'Netzwerk Erbliche Tumorerkrankungen', ''))))))))"
+department;netzwerk;;dropdown;Abteilung;"1, IM1 | 2, AH3";;;;;;;;;;;;
+status_study;status;;dropdown;"Status Studienteilnahme";"0, Keine Angabe | 1, Vorgemerkt | 2, Rekrutiert | 3, Aktiv | 4, Unterbrochen | 5, Abgebrochen | 6, Abgeschlossen | 7, Follow-Up";;;;;;;y;;;;;"# Aus Studien-PMD importiert
+@READONLY"
+start_study_date;status;;text;"Beginn Studienbehandlung";;;date_dmy;;;;;;;;;;"# Aus Studien-PMD importiert
+@READONLY"
+end_study_date;status;;text;"Ende Studienbehandlung";;;date_dmy;;;;;;;;;;"# Aus Studien-PMD importiert
+@READONLY"
+bc_date;status;"Broad Consent / Teilnahmeerklärung";text;"Broad Consent vorgelegt am:";;;date_dmy;;;;;;;;;;"wird manuell eingetragen"
+particip_4;status;;dropdown;"4. Erklärung zur Teilnahme am Modellvorhaben und Zustimmung zur Genomsequenzierung";"1, ja | 0, nein";;;;;;;y;;;;;"# Infos aus Teilnahmeerklärung Frage 4 (Import aus PMD UKBGENOM)
+@READONLY"
+particip_4_1;status;;dropdown;"4.1 Einwilligung zur Fallidentifizierung zum fachlichen Austausch unter Behandlern";"1, ja | 0, nein";;;;;;;y;;;;;"# Infos aus Teilnahmeerklärung Frage 4.1 (Import aus PMD UKBGENOM)
+@READONLY"
+particip_4_2;status;;dropdown;"4.2 Einwilligung zur Re-Identifizierung Ihrer Daten und zur Kontaktaufnahme bei einem Befund in der Forschung";"1, ja | 0, nein";;;;;;;y;;;;;"# Infos aus Teilnahmeerklärung Frage 4.2 (Import aus PMD UKBGENOM)
+@READONLY"
+seq_mode;status;Sequenzierung;dropdown;Sequenzierungsart;"0, Keine | 1, WGS | 2, WES | 3, Panel";;;;;;;;;;;;
+seq_state;status;;dropdown;"Status der Sequenzierung";"1, angemeldet | 2, gestartet | 3, abgeschlossen | 4, abgebrochen";;;;;;;;;;;;
+billing_done;status;Abrechnung;dropdown;"Abrechnung erfolgt";"1, ja | 0, nein";;;;;;;y;;;;;" @DEFAULT = '0'"
+billing_date;status;;text;Abrechnungsdatum;;;date_dmy;;;;"[billing_done] = '1'";y;;;;;
+case_state;status;Fall;dropdown;Fallstatus;"1, offen | 2, abgerechnet | 3, follow-up | 4, lost-to-followup";;;;;;;;;;;;
+case_completed_date;status;;text;"Datum Fallabschluss";;;date_dmy;;;;"[case_state] = '2'";y;;;;;
+case_lost_fu_date;status;;text;"Datum Lost-to-followup";;;date_dmy;;;;"[case_state] = '4'";y;;;;;
+case_id_vn;pruefbericht;Datenupload;text;Fallnummer;;;;;;;;y;;;;;" @FORMINSTANCE=fallnummer"
+report_t_vn;pruefbericht;;text;Vorgangsnummer;;;;;;;;y;;;;;"# Prüfbericht: localCaseID"
+report_data_type;pruefbericht;;dropdown;"Typ der Daten";"G, genomisch | K, klinisch";;;;;;;y;;;;;"Prüfbericht: dataCategory"
+report_type;pruefbericht;;dropdown;"Typ der Meldung";"0, Erstmeldung | 1, Nachtrag | 2, Korrektur | 3, Löschung";;;;;;;y;;;;;"Prüfbericht: submissionType"
+report_date;pruefbericht;;text;"Datum der Leistungserbringung";;;date_dmy;;;;;y;;;;;"Prüfbericht: submissionDate"
+report_dq;pruefbericht;;dropdown;"Ergebnis der Qualitätskontrolle";"0, Nicht bestanden | 1, Bestanden";;;;;;;y;;;;;"Prüfbericht: dataQualityCheckPassed"
+confirm_code;pruefbericht;Meldebestätigung;text;"Code der Meldebestätigung";;;;;;;;;;;;;"Alphanumerischer Code der Meldebestätigung (10 Zeichen)"
+confirm_date;pruefbericht;;text;"Datum der Meldebestätigung";;;date_dmy;;;;;;;;;;
+case_id;fallnummer;;text;Fallnummer;;;;;;;;y;;;;;"Fallnummer des Patienten im Primärsystem: manuell / API"
