@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Fallverwaltung Modellvorhaben Genomsequenzierung" AsOfDateTime="2024-09-30T16:06:34" CreationDateTime="2024-09-30T16:06:34" SourceSystem="REDCap" SourceSystemVersion="14.6.9">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" AsOfDateTime="2024-10-10T15:45:01" CreationDateTime="2024-10-10T15:45:01" SourceSystem="REDCap" SourceSystemVersion="14.7.0">
 <Study OID="Project.FallverwaltungModellvorhabenGe">
 <GlobalVariables>
-	<StudyName>Fallverwaltung Modellvorhaben Genomsequenzierung</StudyName>
-	<StudyDescription>This file contains the metadata, events, and data for REDCap project "Fallverwaltung Modellvorhaben Genomsequenzierung".</StudyDescription>
-	<ProtocolName>Fallverwaltung Modellvorhaben Genomsequenzierung</ProtocolName>
+	<StudyName>Fallverwaltung Modellvorhaben Genomsequenzierung Extern</StudyName>
+	<StudyDescription>This file contains the metadata, events, and data for REDCap project "Fallverwaltung Modellvorhaben Genomsequenzierung Extern".</StudyDescription>
+	<ProtocolName>Fallverwaltung Modellvorhaben Genomsequenzierung Extern</ProtocolName>
 	<redcap:RecordAutonumberingEnabled>1</redcap:RecordAutonumberingEnabled>
 	<redcap:CustomRecordLabel></redcap:CustomRecordLabel>
 	<redcap:SecondaryUniqueField></redcap:SecondaryUniqueField>
-	<redcap:SecondaryUniqueFieldDisplayValue>0</redcap:SecondaryUniqueFieldDisplayValue>
-	<redcap:SecondaryUniqueFieldDisplayLabel>0</redcap:SecondaryUniqueFieldDisplayLabel>
+	<redcap:SecondaryUniqueFieldDisplayValue>1</redcap:SecondaryUniqueFieldDisplayValue>
+	<redcap:SecondaryUniqueFieldDisplayLabel>1</redcap:SecondaryUniqueFieldDisplayLabel>
 	<redcap:SchedulingEnabled>0</redcap:SchedulingEnabled>
 	<redcap:SurveysEnabled>0</redcap:SurveysEnabled>
 	<redcap:SurveyInvitationEmailField></redcap:SurveyInvitationEmailField>
+	<redcap:RandomizationEnabled>0</redcap:RandomizationEnabled>
 	<redcap:DisplayTodayNowButton>1</redcap:DisplayTodayNowButton>
 	<redcap:PreventBranchingEraseValues>0</redcap:PreventBranchingEraseValues>
 	<redcap:RequireChangeReason>0</redcap:RequireChangeReason>
@@ -29,17 +30,21 @@
 	<redcap:ProtectedEmailModeLogo></redcap:ProtectedEmailModeLogo>
 	<redcap:RepeatingInstrumentsAndEvents>
 		<redcap:RepeatingInstruments>
-			<redcap:RepeatingInstrument redcap:UniqueEventName="event_1_arm_1" redcap:RepeatInstrument="pruefbericht" redcap:CustomLabel="[report_data_type]: [report_type] vom [report_date]"/>
 			<redcap:RepeatingInstrument redcap:UniqueEventName="event_1_arm_1" redcap:RepeatInstrument="fallnummer" redcap:CustomLabel="[case_id]"/>
 		</redcap:RepeatingInstruments>
 	</redcap:RepeatingInstrumentsAndEvents>
+	<redcap:UserRolesGroup>
+		<redcap:UserRoles role_name="data entry" unique_role_name="U-355ADLRPK9" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[stammdaten,1][netzwerk,1][status,1][datenupload,1]" data_import_tool="0" data_comparison_tool="0" data_logging="1" email_logging="0" file_repository="1" double_data="0" user_rights="0" data_access_groups="0" graphical="0" reports="0" design="0" alerts="0" calendar="0" data_entry="[stammdaten,1][netzwerk,1][status,1][datenupload,1]" api_export="0" api_import="0" api_modules="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="0" data_quality_execute="0" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
+		<redcap:UserRoles role_name="extern" unique_role_name="U-829RJWTC3A" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[stammdaten,0][netzwerk,0][status,0][datenupload,0][fallnummer,0]" data_import_tool="0" data_comparison_tool="0" data_logging="0" email_logging="0" file_repository="0" double_data="0" user_rights="0" data_access_groups="0" graphical="0" reports="0" design="0" alerts="0" calendar="0" data_entry="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1]" api_export="0" api_import="0" api_modules="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="0" data_quality_execute="0" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
+		<redcap:UserRoles role_name="project manager" unique_role_name="U-264AFMA8AA" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1]" data_import_tool="0" data_comparison_tool="0" data_logging="1" email_logging="1" file_repository="1" double_data="0" user_rights="1" data_access_groups="0" graphical="1" reports="1" design="1" alerts="1" calendar="0" data_entry="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1]" api_export="0" api_import="0" api_modules="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="1" data_quality_execute="1" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
+	</redcap:UserRolesGroup>
 </GlobalVariables>
-<MetaDataVersion OID="Metadata.FallverwaltungModellvorhabenGe_2024-09-30_1606" Name="Fallverwaltung Modellvorhaben Genomsequenzierung" redcap:RecordIdField="record_id">
-	<FormDef OID="Form.id" Name="Stammdaten" Repeating="No" redcap:FormName="id">
-		<ItemGroupRef ItemGroupOID="id.record_id" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="id.kvnr" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="id.kvnr_ik" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="id.id_complete" Mandatory="No"/>
+<MetaDataVersion OID="Metadata.FallverwaltungModellvorhabenGe_2024-10-10_1545" Name="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" redcap:RecordIdField="record_id">
+	<FormDef OID="Form.stammdaten" Name="Stammdaten" Repeating="No" redcap:FormName="stammdaten">
+		<ItemGroupRef ItemGroupOID="stammdaten.record_id" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="stammdaten.kvnr" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="stammdaten.kvnr_ik" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="stammdaten.stammdaten_complete" Mandatory="No"/>
 	</FormDef>
 	<FormDef OID="Form.netzwerk" Name="Netzwerk" Repeating="No" redcap:FormName="netzwerk">
 		<ItemGroupRef ItemGroupOID="netzwerk.network" Mandatory="No"/>
@@ -51,36 +56,33 @@
 		<ItemGroupRef ItemGroupOID="status.particip_4" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="status.seq_mode" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="status.seq_state" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="status.billing_done" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="status.billing_date" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="status.case_state" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="status.case_completed_date" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="status.billing_date" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="status.status_complete" Mandatory="No"/>
 	</FormDef>
-	<FormDef OID="Form.pruefbericht" Name="Datenupload" Repeating="No" redcap:FormName="pruefbericht">
-		<ItemGroupRef ItemGroupOID="pruefbericht.case_id_vn" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="pruefbericht.report_t_vn" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="pruefbericht.confirm_code" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="pruefbericht.confirm_date" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="pruefbericht.pruefbericht_complete" Mandatory="No"/>
+	<FormDef OID="Form.prfbericht" Name="Prüfbericht" Repeating="No" redcap:FormName="prfbericht">
+		<ItemGroupRef ItemGroupOID="prfbericht.case_id_vn" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="prfbericht.confirm_code" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="prfbericht.confirm_date" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="prfbericht.prfbericht_complete" Mandatory="No"/>
 	</FormDef>
 	<FormDef OID="Form.fallnummer" Name="Fallnummer" Repeating="No" redcap:FormName="fallnummer">
 		<ItemGroupRef ItemGroupOID="fallnummer.case_id" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="fallnummer.fallnummer_complete" Mandatory="No"/>
 	</FormDef>
-	<ItemGroupDef OID="id.record_id" Name="Stammdaten" Repeating="No">
+	<ItemGroupDef OID="stammdaten.record_id" Name="Stammdaten" Repeating="No">
 		<ItemRef ItemOID="record_id" Mandatory="No" redcap:Variable="record_id"/>
 		<ItemRef ItemOID="pat_id" Mandatory="Yes" redcap:Variable="pat_id"/>
 		<ItemRef ItemOID="fallnummern_desc" Mandatory="No" redcap:Variable="fallnummern_desc"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="id.kvnr" Name="Krankenversichertennummer" Repeating="No">
+	<ItemGroupDef OID="stammdaten.kvnr" Name="Krankenversichertennummer" Repeating="No">
 		<ItemRef ItemOID="kvnr" Mandatory="Yes" redcap:Variable="kvnr"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="id.kvnr_ik" Name="Stammdaten" Repeating="No">
+	<ItemGroupDef OID="stammdaten.kvnr_ik" Name="Stammdaten" Repeating="No">
 		<ItemRef ItemOID="kvnr_ik" Mandatory="Yes" redcap:Variable="kvnr_ik"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="id.id_complete" Name="Form Status" Repeating="No">
-		<ItemRef ItemOID="id_complete" Mandatory="No" redcap:Variable="id_complete"/>
+	<ItemGroupDef OID="stammdaten.stammdaten_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="stammdaten_complete" Mandatory="No" redcap:Variable="stammdaten_complete"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="netzwerk.network" Name="Netzwerk" Repeating="No">
 		<ItemRef ItemOID="network" Mandatory="No" redcap:Variable="network"/>
@@ -108,41 +110,37 @@
 	</ItemGroupDef>
 	<ItemGroupDef OID="status.seq_state" Name="Status" Repeating="No">
 		<ItemRef ItemOID="seq_state" Mandatory="No" redcap:Variable="seq_state"/>
+		<ItemRef ItemOID="versand_anforderung_date" Mandatory="No" redcap:Variable="versand_anforderung_date"/>
+		<ItemRef ItemOID="probeneingang_date" Mandatory="No" redcap:Variable="probeneingang_date"/>
+		<ItemRef ItemOID="befund_date" Mandatory="No" redcap:Variable="befund_date"/>
+		<ItemRef ItemOID="abebrochen_date" Mandatory="No" redcap:Variable="abebrochen_date"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="status.billing_done" Name="Abrechnung" Repeating="No">
-		<ItemRef ItemOID="billing_done" Mandatory="Yes" redcap:Variable="billing_done"/>
+	<ItemGroupDef OID="status.case_state" Name="Status" Repeating="No">
+		<ItemRef ItemOID="case_state" Mandatory="Yes" redcap:Variable="case_state"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="status.billing_date" Name="Status" Repeating="No">
 		<ItemRef ItemOID="billing_date" Mandatory="Yes" redcap:Variable="billing_date"/>
-	</ItemGroupDef>
-	<ItemGroupDef OID="status.case_state" Name="Fall" Repeating="No">
-		<ItemRef ItemOID="case_state" Mandatory="No" redcap:Variable="case_state"/>
-	</ItemGroupDef>
-	<ItemGroupDef OID="status.case_completed_date" Name="Status" Repeating="No">
-		<ItemRef ItemOID="case_completed_date" Mandatory="Yes" redcap:Variable="case_completed_date"/>
 		<ItemRef ItemOID="case_lost_fu_date" Mandatory="Yes" redcap:Variable="case_lost_fu_date"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="status.status_complete" Name="Form Status" Repeating="No">
 		<ItemRef ItemOID="status_complete" Mandatory="No" redcap:Variable="status_complete"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="pruefbericht.case_id_vn" Name="Datenupload" Repeating="No">
+	<ItemGroupDef OID="prfbericht.case_id_vn" Name="Prüfbericht" Repeating="No">
 		<ItemRef ItemOID="case_id_vn" Mandatory="Yes" redcap:Variable="case_id_vn"/>
-	</ItemGroupDef>
-	<ItemGroupDef OID="pruefbericht.report_t_vn" Name="Datenupload" Repeating="No">
 		<ItemRef ItemOID="report_t_vn" Mandatory="Yes" redcap:Variable="report_t_vn"/>
 		<ItemRef ItemOID="report_data_type" Mandatory="Yes" redcap:Variable="report_data_type"/>
 		<ItemRef ItemOID="report_type" Mandatory="Yes" redcap:Variable="report_type"/>
 		<ItemRef ItemOID="report_date" Mandatory="Yes" redcap:Variable="report_date"/>
 		<ItemRef ItemOID="report_dq" Mandatory="Yes" redcap:Variable="report_dq"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="pruefbericht.confirm_code" Name="Meldebestätigung" Repeating="No">
+	<ItemGroupDef OID="prfbericht.confirm_code" Name="Meldebestätigung" Repeating="No">
 		<ItemRef ItemOID="confirm_code" Mandatory="No" redcap:Variable="confirm_code"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="pruefbericht.confirm_date" Name="Datenupload" Repeating="No">
+	<ItemGroupDef OID="prfbericht.confirm_date" Name="Prüfbericht" Repeating="No">
 		<ItemRef ItemOID="confirm_date" Mandatory="No" redcap:Variable="confirm_date"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="pruefbericht.pruefbericht_complete" Name="Form Status" Repeating="No">
-		<ItemRef ItemOID="pruefbericht_complete" Mandatory="No" redcap:Variable="pruefbericht_complete"/>
+	<ItemGroupDef OID="prfbericht.prfbericht_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="prfbericht_complete" Mandatory="No" redcap:Variable="prfbericht_complete"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="fallnummer.case_id" Name="Fallnummer" Repeating="No">
 		<ItemRef ItemOID="case_id" Mandatory="Yes" redcap:Variable="case_id"/>
@@ -166,18 +164,20 @@
 	<ItemDef OID="kvnr" Name="kvnr" DataType="text" Length="999" redcap:Variable="kvnr" redcap:FieldType="text" redcap:SectionHeader="Krankenversichertennummer" redcap:RequiredField="y" redcap:FieldAnnotation="# Import aus Clinical Data Lake (NCIR/VERNR)">
 		<Question><TranslatedText>KVNR unveränderbarer Teil</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="kvnr_ik" Name="kvnr_ik" DataType="text" Length="999" redcap:Variable="kvnr_ik" redcap:FieldType="text" redcap:RequiredField="y">
+	<ItemDef OID="kvnr_ik" Name="kvnr_ik" DataType="text" Length="999" redcap:Variable="kvnr_ik" redcap:FieldType="text" redcap:RequiredField="y" redcap:FieldAnnotation="// notwendig?
+@HIDDEN">
 		<Question><TranslatedText>KVNR Institutionskennzeichen</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="id_complete" Name="id_complete" DataType="text" Length="1" redcap:Variable="id_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+	<ItemDef OID="stammdaten_complete" Name="stammdaten_complete" DataType="text" Length="1" redcap:Variable="stammdaten_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
 		<Question><TranslatedText>Complete?</TranslatedText></Question>
-		<CodeListRef CodeListOID="id_complete.choices"/>
+		<CodeListRef CodeListOID="stammdaten_complete.choices"/>
 	</ItemDef>
-	<ItemDef OID="network" Name="network" DataType="text" Length="2" redcap:Variable="network" redcap:FieldType="select">
+	<ItemDef OID="network" Name="network" DataType="text" Length="2" redcap:Variable="network" redcap:FieldType="select" redcap:FieldAnnotation="// Liste der internen Bezeichungen der Netzwerke, bitte anpassen!">
 		<Question><TranslatedText>Netzwerk</TranslatedText></Question>
 		<CodeListRef CodeListOID="network.choices"/>
 	</ItemDef>
-	<ItemDef OID="network_title" Name="network_title" DataType="text" Length="999" redcap:Variable="network_title" redcap:FieldType="text" redcap:FieldAnnotation="@CALCTEXT(if([network]=&#039;1&#039;, &#039;Netzwerk Seltene Erkrankungen&#039;, 
+	<ItemDef OID="network_title" Name="network_title" DataType="text" Length="999" redcap:Variable="network_title" redcap:FieldType="text" redcap:FieldAnnotation="// Anzeige der Bezeichnungen der Netzwerke auf Grundlage des Codes des Netzwerks
+@CALCTEXT(if([network]=&#039;1&#039;, &#039;Netzwerk Seltene Erkrankungen&#039;, 
 if([network]=&#039;2&#039;, &#039;Deutsches Netzwerk für Personalisierte Medizin&#039;, 
 if([network]=&#039;3&#039;, &#039;Nationales Centrum für Tumorerkrankungen / Deutsches Krebskonsortium&#039;, 
 if([network]=&#039;4&#039;, &#039;Nationales Netzwerk für genomische Medizin&#039;, 
@@ -186,7 +186,7 @@ if([network]=&#039;6&#039;, &#039;Deutsches Konsortium für Familiären Darmkreb
 if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#039;&#039;))))))))">
 		<Question><TranslatedText>Netzwerk Titel</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="department" Name="department" DataType="text" Length="1" redcap:Variable="department" redcap:FieldType="select">
+	<ItemDef OID="department" Name="department" DataType="text" Length="1" redcap:Variable="department" redcap:FieldType="select" redcap:FieldAnnotation="// interne Bezeichnung der Abteilung, bitte anpassen!">
 		<Question><TranslatedText>Abteilung</TranslatedText></Question>
 		<CodeListRef CodeListOID="department.choices"/>
 	</ItemDef>
@@ -194,17 +194,14 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<Question><TranslatedText>Complete?</TranslatedText></Question>
 		<CodeListRef CodeListOID="netzwerk_complete.choices"/>
 	</ItemDef>
-	<ItemDef OID="status_study" Name="status_study" DataType="text" Length="1" redcap:Variable="status_study" redcap:FieldType="select" redcap:RequiredField="y" redcap:FieldAnnotation="# Aus Studien-PMD importiert
-@READONLY">
+	<ItemDef OID="status_study" Name="status_study" DataType="text" Length="1" redcap:Variable="status_study" redcap:FieldType="select" redcap:RequiredField="y">
 		<Question><TranslatedText>Status Studienteilnahme</TranslatedText></Question>
 		<CodeListRef CodeListOID="status_study.choices"/>
 	</ItemDef>
-	<ItemDef OID="start_study_date" Name="start_study_date" DataType="date" Length="999" redcap:Variable="start_study_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:FieldAnnotation="# Aus Studien-PMD importiert
-@READONLY">
+	<ItemDef OID="start_study_date" Name="start_study_date" DataType="date" Length="999" redcap:Variable="start_study_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy">
 		<Question><TranslatedText>Beginn Studienbehandlung</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="end_study_date" Name="end_study_date" DataType="date" Length="999" redcap:Variable="end_study_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:FieldAnnotation="# Aus Studien-PMD importiert
-@READONLY">
+	<ItemDef OID="end_study_date" Name="end_study_date" DataType="date" Length="999" redcap:Variable="end_study_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy">
 		<Question><TranslatedText>Ende Studienbehandlung</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="bc_date" Name="bc_date" DataType="date" Length="999" redcap:Variable="bc_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:SectionHeader="Broad Consent / Teilnahmeerklärung" redcap:FieldAnnotation="wird manuell eingetragen">
@@ -233,19 +230,24 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<Question><TranslatedText>Status der Sequenzierung</TranslatedText></Question>
 		<CodeListRef CodeListOID="seq_state.choices"/>
 	</ItemDef>
-	<ItemDef OID="billing_done" Name="billing_done" DataType="text" Length="1" redcap:Variable="billing_done" redcap:FieldType="select" redcap:SectionHeader="Abrechnung" redcap:RequiredField="y" redcap:FieldAnnotation="@DEFAULT = &#039;0&#039;">
-		<Question><TranslatedText>Abrechnung erfolgt</TranslatedText></Question>
-		<CodeListRef CodeListOID="billing_done.choices"/>
+	<ItemDef OID="versand_anforderung_date" Name="versand_anforderung_date" DataType="date" Length="999" redcap:Variable="versand_anforderung_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:BranchingLogic="[seq_state] &gt; 0">
+		<Question><TranslatedText>Datum Versand Anforderung und Blutprobe</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="billing_date" Name="billing_date" DataType="date" Length="999" redcap:Variable="billing_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:RequiredField="y" redcap:BranchingLogic="[billing_done] = &#039;1&#039;">
-		<Question><TranslatedText>Abrechnungsdatum</TranslatedText></Question>
+	<ItemDef OID="probeneingang_date" Name="probeneingang_date" DataType="date" Length="999" redcap:Variable="probeneingang_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:BranchingLogic="[seq_state] &gt; 1">
+		<Question><TranslatedText>Datum Probeneingang</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="case_state" Name="case_state" DataType="text" Length="1" redcap:Variable="case_state" redcap:FieldType="select" redcap:SectionHeader="Fall">
+	<ItemDef OID="befund_date" Name="befund_date" DataType="date" Length="999" redcap:Variable="befund_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:BranchingLogic="[seq_state] &gt; 2">
+		<Question><TranslatedText>Datum Genetischer Befund</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="abebrochen_date" Name="abebrochen_date" DataType="date" Length="999" redcap:Variable="abebrochen_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:BranchingLogic="[seq_state] &gt; 3">
+		<Question><TranslatedText>Datum Abgebrochen</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="case_state" Name="case_state" DataType="text" Length="1" redcap:Variable="case_state" redcap:FieldType="select" redcap:SectionHeader="Status" redcap:RequiredField="y">
 		<Question><TranslatedText>Fallstatus</TranslatedText></Question>
 		<CodeListRef CodeListOID="case_state.choices"/>
 	</ItemDef>
-	<ItemDef OID="case_completed_date" Name="case_completed_date" DataType="date" Length="999" redcap:Variable="case_completed_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:RequiredField="y" redcap:BranchingLogic="[case_state] = &#039;2&#039;">
-		<Question><TranslatedText>Datum Fallabschluss</TranslatedText></Question>
+	<ItemDef OID="billing_date" Name="billing_date" DataType="date" Length="999" redcap:Variable="billing_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:RequiredField="y" redcap:BranchingLogic="[case_state] = &#039;2&#039;">
+		<Question><TranslatedText>Abrechnungsdatum</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="case_lost_fu_date" Name="case_lost_fu_date" DataType="date" Length="999" redcap:Variable="case_lost_fu_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:RequiredField="y" redcap:BranchingLogic="[case_state] = &#039;4&#039;">
 		<Question><TranslatedText>Datum Lost-to-followup</TranslatedText></Question>
@@ -254,7 +256,7 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<Question><TranslatedText>Complete?</TranslatedText></Question>
 		<CodeListRef CodeListOID="status_complete.choices"/>
 	</ItemDef>
-	<ItemDef OID="case_id_vn" Name="case_id_vn" DataType="text" Length="999" redcap:Variable="case_id_vn" redcap:FieldType="text" redcap:SectionHeader="Datenupload" redcap:RequiredField="y" redcap:FieldAnnotation="@FORMINSTANCE=fallnummer">
+	<ItemDef OID="case_id_vn" Name="case_id_vn" DataType="text" Length="999" redcap:Variable="case_id_vn" redcap:FieldType="text" redcap:RequiredField="y" redcap:FieldAnnotation="@FORMINSTANCE=fallnummer">
 		<Question><TranslatedText>Fallnummer</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="report_t_vn" Name="report_t_vn" DataType="text" Length="999" redcap:Variable="report_t_vn" redcap:FieldType="text" redcap:RequiredField="y" redcap:FieldAnnotation="# Prüfbericht: localCaseID">
@@ -269,7 +271,7 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<CodeListRef CodeListOID="report_type.choices"/>
 	</ItemDef>
 	<ItemDef OID="report_date" Name="report_date" DataType="date" Length="999" redcap:Variable="report_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:RequiredField="y" redcap:FieldAnnotation="Prüfbericht: submissionDate">
-		<Question><TranslatedText>Datum der Leistungserbringung</TranslatedText></Question>
+		<Question><TranslatedText>Datum der Datenübertragung</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="report_dq" Name="report_dq" DataType="text" Length="1" redcap:Variable="report_dq" redcap:FieldType="select" redcap:RequiredField="y" redcap:FieldAnnotation="Prüfbericht: dataQualityCheckPassed">
 		<Question><TranslatedText>Ergebnis der Qualitätskontrolle</TranslatedText></Question>
@@ -281,9 +283,9 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 	<ItemDef OID="confirm_date" Name="confirm_date" DataType="date" Length="999" redcap:Variable="confirm_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy">
 		<Question><TranslatedText>Datum der Meldebestätigung</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="pruefbericht_complete" Name="pruefbericht_complete" DataType="text" Length="1" redcap:Variable="pruefbericht_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+	<ItemDef OID="prfbericht_complete" Name="prfbericht_complete" DataType="text" Length="1" redcap:Variable="prfbericht_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
 		<Question><TranslatedText>Complete?</TranslatedText></Question>
-		<CodeListRef CodeListOID="pruefbericht_complete.choices"/>
+		<CodeListRef CodeListOID="prfbericht_complete.choices"/>
 	</ItemDef>
 	<ItemDef OID="case_id" Name="case_id" DataType="text" Length="999" redcap:Variable="case_id" redcap:FieldType="text" redcap:RequiredField="y" redcap:FieldAnnotation="Fallnummer des Patienten im Primärsystem: manuell / API">
 		<Question><TranslatedText>Fallnummer</TranslatedText></Question>
@@ -292,7 +294,7 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<Question><TranslatedText>Complete?</TranslatedText></Question>
 		<CodeListRef CodeListOID="fallnummer_complete.choices"/>
 	</ItemDef>
-	<CodeList OID="id_complete.choices" Name="id_complete" DataType="text" redcap:Variable="id_complete">
+	<CodeList OID="stammdaten_complete.choices" Name="stammdaten_complete" DataType="text" redcap:Variable="stammdaten_complete">
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
@@ -312,6 +314,7 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 	<CodeList OID="department.choices" Name="department" DataType="text" redcap:Variable="department">
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>IM1</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="2"><Decode><TranslatedText>AH3</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>ZE1</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="netzwerk_complete.choices" Name="netzwerk_complete" DataType="text" redcap:Variable="netzwerk_complete">
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
@@ -352,10 +355,6 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<CodeListItem CodedValue="3"><Decode><TranslatedText>abgeschlossen</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="4"><Decode><TranslatedText>abgebrochen</TranslatedText></Decode></CodeListItem>
 	</CodeList>
-	<CodeList OID="billing_done.choices" Name="billing_done" DataType="text" redcap:Variable="billing_done">
-		<CodeListItem CodedValue="1"><Decode><TranslatedText>ja</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="0"><Decode><TranslatedText>nein</TranslatedText></Decode></CodeListItem>
-	</CodeList>
 	<CodeList OID="case_state.choices" Name="case_state" DataType="text" redcap:Variable="case_state">
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>offen</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="2"><Decode><TranslatedText>abgerechnet</TranslatedText></Decode></CodeListItem>
@@ -381,7 +380,7 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Nicht bestanden</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>Bestanden</TranslatedText></Decode></CodeListItem>
 	</CodeList>
-	<CodeList OID="pruefbericht_complete.choices" Name="pruefbericht_complete" DataType="text" redcap:Variable="pruefbericht_complete">
+	<CodeList OID="prfbericht_complete.choices" Name="prfbericht_complete" DataType="text" redcap:Variable="prfbericht_complete">
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
