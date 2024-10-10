@@ -18,7 +18,7 @@ Zur einfacheren Bedienung werden externe Module eingesetzt (optional). Falls gew
 ![Module](Screenshot_MVH_Module.png)
 
 ## Übersicht über die Datenstruktur
-- [PDF Datei](Fallverwaltung Modellvorhaben Genomsequenzierung_REDCap.pdf)
+- [PDF Datei](Fallverwaltung_Modellvorhaben_Genomsequenzierung_REDCap.pdf)
  
 ## Anmerkungen zur Datenstruktur:
 - Feld [network]: Auflistung der internen Bezeichnungen der Register, bitte anpassen!
