@@ -4,7 +4,7 @@ Beispielprojekt zum Fallmanagement in REDCap als Vorlage zur Anpassung an lokale
 
 ## Installation
 - Voraussetzung ist eine REDCap Installation. Eine REDCap-Lizenz kann hier beantragt werden: https://projectredcap.org/partners/join/.
-- Das Beispielprojekt inklusive notwendiger Einstellungen kann von einem REDCap Administrator mit der [CDISC ODM XML-Vorlage](FallverwaltungModell_REDCap.xml) erstellt werden.
+- Das Beispielprojekt inklusive notwendiger Einstellungen kann von einem REDCap Administrator mit der [CDISC ODM XML-Vorlage](FallverwaltungModell_REDCap.xml) erstellt werden:
 
 ![Create Project](mvh_case_project.png)
 - Alternativ kann ein leeres Projekt erstellt werden und dort die Datenstruktur mit der [CSV Datei](FallverwaltungModellvorhaben_DataDictionary.csv) importiert werden (Strichpunkt als Separator).
