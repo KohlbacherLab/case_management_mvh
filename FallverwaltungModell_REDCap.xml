@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" AsOfDateTime="2024-10-10T17:09:09" CreationDateTime="2024-10-10T17:09:09" SourceSystem="REDCap" SourceSystemVersion="14.7.0">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" AsOfDateTime="2024-10-10T17:15:15" CreationDateTime="2024-10-10T17:15:15" SourceSystem="REDCap" SourceSystemVersion="14.7.0">
 <Study OID="Project.FallverwaltungModellvorhabenGe">
 <GlobalVariables>
 	<StudyName>Fallverwaltung Modellvorhaben Genomsequenzierung Extern</StudyName>
@@ -40,11 +40,11 @@
 		<redcap:UserRoles role_name="project manager" unique_role_name="U-264AFMA8AA" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1]" data_import_tool="0" data_comparison_tool="0" data_logging="1" email_logging="1" file_repository="1" double_data="0" user_rights="1" data_access_groups="0" graphical="1" reports="1" design="1" alerts="1" calendar="0" data_entry="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1]" api_export="0" api_import="0" api_modules="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="1" data_quality_execute="1" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
 	</redcap:UserRolesGroup>
 </GlobalVariables>
-<MetaDataVersion OID="Metadata.FallverwaltungModellvorhabenGe_2024-10-10_1709" Name="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" redcap:RecordIdField="record_id">
-	<FormDef OID="Form.id" Name="Id" Repeating="No" redcap:FormName="id">
-		<ItemGroupRef ItemGroupOID="id.record_id" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="id.kvnr" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="id.id_complete" Mandatory="No"/>
+<MetaDataVersion OID="Metadata.FallverwaltungModellvorhabenGe_2024-10-10_1715" Name="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" redcap:RecordIdField="record_id">
+	<FormDef OID="Form.stammdaten" Name="Stammdaten" Repeating="No" redcap:FormName="stammdaten">
+		<ItemGroupRef ItemGroupOID="stammdaten.record_id" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="stammdaten.kvnr" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="stammdaten.stammdaten_complete" Mandatory="No"/>
 	</FormDef>
 	<FormDef OID="Form.netzwerk" Name="Netzwerk" Repeating="No" redcap:FormName="netzwerk">
 		<ItemGroupRef ItemGroupOID="netzwerk.network" Mandatory="No"/>
@@ -70,16 +70,16 @@
 		<ItemGroupRef ItemGroupOID="fallnummer.case_id" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="fallnummer.fallnummer_complete" Mandatory="No"/>
 	</FormDef>
-	<ItemGroupDef OID="id.record_id" Name="Id" Repeating="No">
+	<ItemGroupDef OID="stammdaten.record_id" Name="Stammdaten" Repeating="No">
 		<ItemRef ItemOID="record_id" Mandatory="No" redcap:Variable="record_id"/>
 		<ItemRef ItemOID="pat_id" Mandatory="Yes" redcap:Variable="pat_id"/>
 		<ItemRef ItemOID="fallnummern_desc" Mandatory="No" redcap:Variable="fallnummern_desc"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="id.kvnr" Name="Krankenversichertennummer" Repeating="No">
+	<ItemGroupDef OID="stammdaten.kvnr" Name="Krankenversichertennummer" Repeating="No">
 		<ItemRef ItemOID="kvnr" Mandatory="Yes" redcap:Variable="kvnr"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="id.id_complete" Name="Form Status" Repeating="No">
-		<ItemRef ItemOID="id_complete" Mandatory="No" redcap:Variable="id_complete"/>
+	<ItemGroupDef OID="stammdaten.stammdaten_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="stammdaten_complete" Mandatory="No" redcap:Variable="stammdaten_complete"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="netzwerk.network" Name="Netzwerk" Repeating="No">
 		<ItemRef ItemOID="network" Mandatory="No" redcap:Variable="network"/>
@@ -161,9 +161,9 @@
 	<ItemDef OID="kvnr" Name="kvnr" DataType="text" Length="999" redcap:Variable="kvnr" redcap:FieldType="text" redcap:SectionHeader="Krankenversichertennummer" redcap:RequiredField="y">
 		<Question><TranslatedText>KVNR unveränderbarer Teil</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="id_complete" Name="id_complete" DataType="text" Length="1" redcap:Variable="id_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+	<ItemDef OID="stammdaten_complete" Name="stammdaten_complete" DataType="text" Length="1" redcap:Variable="stammdaten_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
 		<Question><TranslatedText>Complete?</TranslatedText></Question>
-		<CodeListRef CodeListOID="id_complete.choices"/>
+		<CodeListRef CodeListOID="stammdaten_complete.choices"/>
 	</ItemDef>
 	<ItemDef OID="network" Name="network" DataType="text" Length="2" redcap:Variable="network" redcap:FieldType="select" redcap:FieldAnnotation="// Liste der internen Bezeichungen der Netzwerke, bitte anpassen!">
 		<Question><TranslatedText>Netzwerk</TranslatedText></Question>
@@ -287,7 +287,7 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<Question><TranslatedText>Complete?</TranslatedText></Question>
 		<CodeListRef CodeListOID="fallnummer_complete.choices"/>
 	</ItemDef>
-	<CodeList OID="id_complete.choices" Name="id_complete" DataType="text" redcap:Variable="id_complete">
+	<CodeList OID="stammdaten_complete.choices" Name="stammdaten_complete" DataType="text" redcap:Variable="stammdaten_complete">
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
