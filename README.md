@@ -19,9 +19,9 @@ Zur einfacheren Bedienung werden externe Module eingesetzt (optional). Falls gew
 
 ## Übersicht über die Datenstruktur
 - [PDF Datei](Fallverwaltung_Modellvorhaben_Genomsequenzierung_REDCap.pdf)
-- Die Fragebögen "Prüfbericht" und "Fallnummer" sind als wiederholte Fragebögen definiert, da diese beliebig oft eingegeben werden können
- 
+  
 ## Anmerkungen zur Datenstruktur:
+- Die Fragebögen "Prüfbericht" und "Fallnummer" sind als wiederholte Fragebögen definiert, da diese beliebig oft eingegeben werden können
 - Feld [network]: Auflistung der internen Bezeichnungen der Register, bitte anpassen!
 - Feld [network_title]: Ausgabe der Bezeichnungen der Register, bitte anpassen!
 - Feld [department]: Interne Abteilungskürzel, bitte anpassen!
