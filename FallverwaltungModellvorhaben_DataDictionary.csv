@@ -29,10 +29,10 @@ particip_4_2;status;;dropdown;"4.2 Einwilligung zur Re-Identifizierung Ihrer Dat
 @READONLY"
 seq_mode;status;Sequenzierung;dropdown;Sequenzierungsart;"0, Keine | 1, WGS | 2, WES | 3, Panel";;;;;;;;;;;;
 seq_state;status;;dropdown;"Status der Sequenzierung";"1, angemeldet | 2, gestartet | 3, abgeschlossen | 4, abgebrochen";;;;;;;;;;;;
-versand_anforderung_date;status;;text;"Datum Versand Anforderung und Blutprobe";;;date_dmy;;;;"[seq_state] > 0";;;;;;
-probeneingang_date;status;;text;"Datum Probeneingang";;;date_dmy;;;;"[seq_state] > 1";;;;;;
-befund_date;status;;text;"Datum Genetischer Befund";;;date_dmy;;;;"[seq_state] > 2";;;;;;
-abebrochen_date;status;;text;"Datum Abgebrochen";;;date_dmy;;;;"[seq_state] > 3";;;;;;
+sample_dispatch_date;status;;text;"Datum Versand Anforderung und Blutprobe";;;date_dmy;;;;"[seq_state] > 0";;;;;;
+sample_arrival_date;status;;text;"Datum Probeneingang";;;date_dmy;;;;"[seq_state] > 1";;;;;;
+gen_finding_date;status;;text;"Datum Genetischer Befund";;;date_dmy;;;;"[seq_state] > 2";;;;;;
+cancelled_date;status;;text;"Datum Abgebrochen";;;date_dmy;;;;"[seq_state] > 3";;;;;;
 case_state;status;Status;dropdown;Fallstatus;"1, offen | 2, abgerechnet | 3, follow-up | 4, lost-to-followup";;;;;;;y;;;;;
 billing_date;status;;text;Abrechnungsdatum;;;date_dmy;;;;"[case_state] = '2'";y;;;;;
 case_lost_fu_date;status;;text;"Datum Lost-to-followup";;;date_dmy;;;;"[case_state] = '4'";y;;;;;

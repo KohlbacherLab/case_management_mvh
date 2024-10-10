@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" AsOfDateTime="2024-10-10T16:39:03" CreationDateTime="2024-10-10T16:39:03" SourceSystem="REDCap" SourceSystemVersion="14.7.0">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" AsOfDateTime="2024-10-10T16:54:36" CreationDateTime="2024-10-10T16:54:36" SourceSystem="REDCap" SourceSystemVersion="14.7.0">
 <Study OID="Project.FallverwaltungModellvorhabenGe">
 <GlobalVariables>
 	<StudyName>Fallverwaltung Modellvorhaben Genomsequenzierung Extern</StudyName>
@@ -39,7 +39,7 @@
 		<redcap:UserRoles role_name="project manager" unique_role_name="U-264AFMA8AA" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1]" data_import_tool="0" data_comparison_tool="0" data_logging="1" email_logging="1" file_repository="1" double_data="0" user_rights="1" data_access_groups="0" graphical="1" reports="1" design="1" alerts="1" calendar="0" data_entry="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1]" api_export="0" api_import="0" api_modules="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="1" data_quality_execute="1" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
 	</redcap:UserRolesGroup>
 </GlobalVariables>
-<MetaDataVersion OID="Metadata.FallverwaltungModellvorhabenGe_2024-10-10_1639" Name="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" redcap:RecordIdField="record_id">
+<MetaDataVersion OID="Metadata.FallverwaltungModellvorhabenGe_2024-10-10_1654" Name="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" redcap:RecordIdField="record_id">
 	<FormDef OID="Form.stammdaten" Name="Stammdaten" Repeating="No" redcap:FormName="stammdaten">
 		<ItemGroupRef ItemGroupOID="stammdaten.record_id" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="stammdaten.kvnr" Mandatory="No"/>
@@ -106,10 +106,10 @@
 	</ItemGroupDef>
 	<ItemGroupDef OID="status.seq_state" Name="Status" Repeating="No">
 		<ItemRef ItemOID="seq_state" Mandatory="No" redcap:Variable="seq_state"/>
-		<ItemRef ItemOID="versand_anforderung_date" Mandatory="No" redcap:Variable="versand_anforderung_date"/>
-		<ItemRef ItemOID="probeneingang_date" Mandatory="No" redcap:Variable="probeneingang_date"/>
-		<ItemRef ItemOID="befund_date" Mandatory="No" redcap:Variable="befund_date"/>
-		<ItemRef ItemOID="abebrochen_date" Mandatory="No" redcap:Variable="abebrochen_date"/>
+		<ItemRef ItemOID="sample_dispatch_date" Mandatory="No" redcap:Variable="sample_dispatch_date"/>
+		<ItemRef ItemOID="sample_arrival_date" Mandatory="No" redcap:Variable="sample_arrival_date"/>
+		<ItemRef ItemOID="gen_finding_date" Mandatory="No" redcap:Variable="gen_finding_date"/>
+		<ItemRef ItemOID="cancelled_date" Mandatory="No" redcap:Variable="cancelled_date"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="status.case_state" Name="Status" Repeating="No">
 		<ItemRef ItemOID="case_state" Mandatory="Yes" redcap:Variable="case_state"/>
@@ -222,16 +222,16 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<Question><TranslatedText>Status der Sequenzierung</TranslatedText></Question>
 		<CodeListRef CodeListOID="seq_state.choices"/>
 	</ItemDef>
-	<ItemDef OID="versand_anforderung_date" Name="versand_anforderung_date" DataType="date" Length="999" redcap:Variable="versand_anforderung_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:BranchingLogic="[seq_state] &gt; 0">
+	<ItemDef OID="sample_dispatch_date" Name="sample_dispatch_date" DataType="date" Length="999" redcap:Variable="sample_dispatch_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:BranchingLogic="[seq_state] &gt; 0">
 		<Question><TranslatedText>Datum Versand Anforderung und Blutprobe</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="probeneingang_date" Name="probeneingang_date" DataType="date" Length="999" redcap:Variable="probeneingang_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:BranchingLogic="[seq_state] &gt; 1">
+	<ItemDef OID="sample_arrival_date" Name="sample_arrival_date" DataType="date" Length="999" redcap:Variable="sample_arrival_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:BranchingLogic="[seq_state] &gt; 1">
 		<Question><TranslatedText>Datum Probeneingang</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="befund_date" Name="befund_date" DataType="date" Length="999" redcap:Variable="befund_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:BranchingLogic="[seq_state] &gt; 2">
+	<ItemDef OID="gen_finding_date" Name="gen_finding_date" DataType="date" Length="999" redcap:Variable="gen_finding_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:BranchingLogic="[seq_state] &gt; 2">
 		<Question><TranslatedText>Datum Genetischer Befund</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="abebrochen_date" Name="abebrochen_date" DataType="date" Length="999" redcap:Variable="abebrochen_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:BranchingLogic="[seq_state] &gt; 3">
+	<ItemDef OID="cancelled_date" Name="cancelled_date" DataType="date" Length="999" redcap:Variable="cancelled_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:BranchingLogic="[seq_state] &gt; 3">
 		<Question><TranslatedText>Datum Abgebrochen</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="case_state" Name="case_state" DataType="text" Length="1" redcap:Variable="case_state" redcap:FieldType="select" redcap:SectionHeader="Status" redcap:RequiredField="y">
