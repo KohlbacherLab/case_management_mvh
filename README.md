@@ -1,6 +1,6 @@
-# Fallverwaltung Modellvorhaben Genomsequenzierung
+# Fallmanagement Modellvorhaben Genomsequenzierung (MV GenomSeq) nach § 64e SGB V
 
-Beispielprojekt in REDCap als Vorlage zur Anpassung an lokale Gegebenheiten. 
+Beispielprojekt zum Fallmanagement in REDCap als Vorlage zur Anpassung an lokale Gegebenheiten. 
 
 ## Installation
 - Voraussetzung ist eine REDCap Installation. Eine REDCap-Lizenz kann hier beantragt werden: https://projectredcap.org/partners/join/.
