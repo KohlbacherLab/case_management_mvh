@@ -1,12 +1,12 @@
 ﻿"Variable / Field Name";"Form Name";"Section Header";"Field Type";"Field Label";"Choices, Calculations, OR Slider Labels";"Field Note";"Text Validation Type OR Show Slider Number";"Text Validation Min";"Text Validation Max";Identifier?;"Branching Logic (Show field only if...)";"Required Field?";"Custom Alignment";"Question Number (surveys only)";"Matrix Group Name";"Matrix Ranking?";"Field Annotation"
-record_id;stammdaten;;text;ID;;;;;;;;;;;;;
-pat_id;stammdaten;;text;SAP-ID;;;;;;;;y;;;;;"# ID des Patienten im Primärsystem (wird automatisch importiert)
+record_id;id;;text;ID;;;;;;;;;;;;;
+pat_id;id;;text;SAP-ID;;;;;;;;y;;;;;"# ID des Patienten im Primärsystem (wird automatisch importiert)
 @READONLY"
-fallnummern_desc;stammdaten;;descriptive;Fallnummern;;;;;;;;;;;;;" @INSTANCETABLE=fallnummer
+fallnummern_desc;id;;descriptive;Fallnummern;;;;;;;;;;;;;" @INSTANCETABLE=fallnummer
 @INSTANCETABLE_VARLIST=case_id
 @INSTANCETABLE_HIDEINSTANCECOL
 @INSTANCETABLE_ADDBTNLABEL='Neue Fallnummer'"
-kvnr;stammdaten;Krankenversichertennummer;text;"KVNR unveränderbarer Teil";;;;;;;;y;;;;;
+kvnr;id;Krankenversichertennummer;text;"KVNR unveränderbarer Teil";;;;;;;;y;;;;;
 network;netzwerk;;dropdown;Netzwerk;"1, UKT-2024-ZE1-2973 | 2, UKT-2024-IM1-2975 | 3, UKT-2024-IM1-2976 | 4, UKT-2024-IM1-2977 | 5, UKT-2024-AH3-2971 | 6, UKT-2024-AH3-2972 | 7, UKT-2024-AH3-2974 | 8, ohne Zuordnung | 9, UKT-2023-IM1-2739 | 10, UKT-2017-NE6-2572";;;;;;;;;;;;"// Liste der internen Bezeichungen der Netzwerke, bitte anpassen!"
 network_title;netzwerk;;text;"Netzwerk Titel";;;;;;;;;;;;;"// Anzeige der Bezeichnungen der Netzwerke auf Grundlage des Codes des Netzwerks
 @CALCTEXT(if([network]='1', 'Netzwerk Seltene Erkrankungen', 
@@ -21,12 +21,15 @@ status_study;status;;dropdown;"Status Studienteilnahme";"0, Keine Angabe | 1, Vo
 start_study_date;status;;text;"Beginn Studienbehandlung";;;date_dmy;;;;;;;;;;
 end_study_date;status;;text;"Ende Studienbehandlung";;;date_dmy;;;;;;;;;;
 bc_date;status;"Broad Consent / Teilnahmeerklärung";text;"Broad Consent vorgelegt am:";;;date_dmy;;;;;;;;;;"wird manuell eingetragen"
-particip_4;status;;dropdown;"4. Erklärung zur Teilnahme am Modellvorhaben und Zustimmung zur Genomsequenzierung";"1, ja | 0, nein";;;;;;;y;;;;;"# Infos aus Teilnahmeerklärung Frage 4 (Import aus PMD UKBGENOM)
-@READONLY"
-particip_4_1;status;;dropdown;"4.1 Einwilligung zur Fallidentifizierung zum fachlichen Austausch unter Behandlern";"1, ja | 0, nein";;;;;;;y;;;;;"# Infos aus Teilnahmeerklärung Frage 4.1 (Import aus PMD UKBGENOM)
-@READONLY"
-particip_4_2;status;;dropdown;"4.2 Einwilligung zur Re-Identifizierung Ihrer Daten und zur Kontaktaufnahme bei einem Befund in der Forschung";"1, ja | 0, nein";;;;;;;y;;;;;"# Infos aus Teilnahmeerklärung Frage 4.2 (Import aus PMD UKBGENOM)
-@READONLY"
+datum_teilnahme;status;Teilnahmeerklärung;text;"Datum der Teilnahmeerklärung";;;date_dmy;;;;;y;;;;;
+version_teilnahme;status;;text;"Version der Teilnahmeerklärung";;;;;;;"[datum_teilnahme] <> ''";y;;;;;" @DEFAULT='BfArM 26.08.2024'"
+particip_4;status;;radio;"Erklärung zur Teilnahme am Modellvorhaben und Einwilligung zur Genomsequenzierung";"1, Ja | 0, Nein";;;;;;"[datum_teilnahme] <> ''";y;;;;;
+particip_4_1;status;;radio;"Einwilligung zur Fallidentifizierung zum fachlichen Austausch unter Behandlern";"1, Ja | 0, Nein";;;;;;"[datum_teilnahme] <> ''";y;;;;;
+particip_4_2;status;;radio;"Einwilligung zur Re-Identifizierung der Versichertendaten und zur Kontaktaufnahme bei einem neuen Befund in der Forschung";"1, Ja | 0, Nein";;;;;;"[datum_teilnahme] <> ''";y;;;;;
+datum_kuendigung_te;status;;text;"Datum der Kündigung der Teilnahmeerklärung";;;date_dmy;;;;;;;;;;
+kuendigung_seq;status;;radio;"Kündigung der Erklärung zur Teilnahme am Modellvorhaben und Einwilligung zur Genomsequenzierung";"1, Ja | 0, Nein";;;;;;"[datum_kuendigung_te] <> ''";;;;;;
+kuendigung_austausch;status;;radio;"Kündigung der Einwilligung zur Fallidentifizierung zum fachlichen Austausch unter Behandlern";"1, Ja | 0, Nein";;;;;;"[datum_kuendigung_te] <> ''";;;;;;
+kuendigung_kontakt;status;;radio;"Kündigung der Einwilligung zur Re-Identifizierung der Versichertendaten und zur Kontaktaufnahme bei einem neuen Befund in der Forschung";"1, Ja | 0, Nein";;;;;;"[datum_kuendigung_te] <> ''";;;;;;
 seq_mode;status;Sequenzierung;dropdown;Sequenzierungsart;"0, Keine | 1, WGS | 2, WES | 3, Panel";;;;;;;;;;;;
 seq_state;status;;dropdown;"Status der Sequenzierung";"1, angemeldet | 2, gestartet | 3, abgeschlossen | 4, abgebrochen";;;;;;;;;;;;
 sample_dispatch_date;status;;text;"Datum Versand Anforderung und Blutprobe";;;date_dmy;;;;"[seq_state] > 0";;;;;;

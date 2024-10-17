@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" AsOfDateTime="2024-10-10T17:15:15" CreationDateTime="2024-10-10T17:15:15" SourceSystem="REDCap" SourceSystemVersion="14.7.0">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" AsOfDateTime="2024-10-17T10:57:39" CreationDateTime="2024-10-17T10:57:39" SourceSystem="REDCap" SourceSystemVersion="14.7.0">
 <Study OID="Project.FallverwaltungModellvorhabenGe">
 <GlobalVariables>
 	<StudyName>Fallverwaltung Modellvorhaben Genomsequenzierung Extern</StudyName>
@@ -37,14 +37,14 @@
 	<redcap:UserRolesGroup>
 		<redcap:UserRoles role_name="data entry" unique_role_name="U-355ADLRPK9" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[stammdaten,1][netzwerk,1][status,1][datenupload,1]" data_import_tool="0" data_comparison_tool="0" data_logging="1" email_logging="0" file_repository="1" double_data="0" user_rights="0" data_access_groups="0" graphical="0" reports="0" design="0" alerts="0" calendar="0" data_entry="[stammdaten,1][netzwerk,1][status,1][datenupload,1]" api_export="0" api_import="0" api_modules="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="0" data_quality_execute="0" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
 		<redcap:UserRoles role_name="extern" unique_role_name="U-829RJWTC3A" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[stammdaten,0][netzwerk,0][status,0][datenupload,0][fallnummer,0]" data_import_tool="0" data_comparison_tool="0" data_logging="0" email_logging="0" file_repository="0" double_data="0" user_rights="0" data_access_groups="0" graphical="0" reports="0" design="0" alerts="0" calendar="0" data_entry="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1]" api_export="0" api_import="0" api_modules="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="0" data_quality_execute="0" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
-		<redcap:UserRoles role_name="project manager" unique_role_name="U-264AFMA8AA" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1]" data_import_tool="0" data_comparison_tool="0" data_logging="1" email_logging="1" file_repository="1" double_data="0" user_rights="1" data_access_groups="0" graphical="1" reports="1" design="1" alerts="1" calendar="0" data_entry="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1]" api_export="0" api_import="0" api_modules="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="1" data_quality_execute="1" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
+		<redcap:UserRoles role_name="project manager" unique_role_name="U-264AFMA8AA" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1][pruefbericht,1]" data_import_tool="0" data_comparison_tool="0" data_logging="1" email_logging="1" file_repository="1" double_data="0" user_rights="1" data_access_groups="0" graphical="1" reports="1" design="1" alerts="1" calendar="0" data_entry="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1][pruefbericht,1]" api_export="0" api_import="0" api_modules="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="1" data_quality_execute="1" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
 	</redcap:UserRolesGroup>
 </GlobalVariables>
-<MetaDataVersion OID="Metadata.FallverwaltungModellvorhabenGe_2024-10-10_1715" Name="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" redcap:RecordIdField="record_id">
-	<FormDef OID="Form.stammdaten" Name="Stammdaten" Repeating="No" redcap:FormName="stammdaten">
-		<ItemGroupRef ItemGroupOID="stammdaten.record_id" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="stammdaten.kvnr" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="stammdaten.stammdaten_complete" Mandatory="No"/>
+<MetaDataVersion OID="Metadata.FallverwaltungModellvorhabenGe_2024-10-17_1057" Name="Fallverwaltung Modellvorhaben Genomsequenzierung Extern" redcap:RecordIdField="record_id">
+	<FormDef OID="Form.id" Name="ID" Repeating="No" redcap:FormName="id">
+		<ItemGroupRef ItemGroupOID="id.record_id" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="id.kvnr" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="id.id_complete" Mandatory="No"/>
 	</FormDef>
 	<FormDef OID="Form.netzwerk" Name="Netzwerk" Repeating="No" redcap:FormName="netzwerk">
 		<ItemGroupRef ItemGroupOID="netzwerk.network" Mandatory="No"/>
@@ -53,7 +53,8 @@
 	<FormDef OID="Form.status" Name="Status" Repeating="No" redcap:FormName="status">
 		<ItemGroupRef ItemGroupOID="status.status_study" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="status.bc_date" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="status.particip_4" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="status.datum_teilnahme" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="status.version_teilnahme" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="status.seq_mode" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="status.seq_state" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="status.case_state" Mandatory="No"/>
@@ -70,16 +71,16 @@
 		<ItemGroupRef ItemGroupOID="fallnummer.case_id" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="fallnummer.fallnummer_complete" Mandatory="No"/>
 	</FormDef>
-	<ItemGroupDef OID="stammdaten.record_id" Name="Stammdaten" Repeating="No">
+	<ItemGroupDef OID="id.record_id" Name="ID" Repeating="No">
 		<ItemRef ItemOID="record_id" Mandatory="No" redcap:Variable="record_id"/>
 		<ItemRef ItemOID="pat_id" Mandatory="Yes" redcap:Variable="pat_id"/>
 		<ItemRef ItemOID="fallnummern_desc" Mandatory="No" redcap:Variable="fallnummern_desc"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="stammdaten.kvnr" Name="Krankenversichertennummer" Repeating="No">
+	<ItemGroupDef OID="id.kvnr" Name="Krankenversichertennummer" Repeating="No">
 		<ItemRef ItemOID="kvnr" Mandatory="Yes" redcap:Variable="kvnr"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="stammdaten.stammdaten_complete" Name="Form Status" Repeating="No">
-		<ItemRef ItemOID="stammdaten_complete" Mandatory="No" redcap:Variable="stammdaten_complete"/>
+	<ItemGroupDef OID="id.id_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="id_complete" Mandatory="No" redcap:Variable="id_complete"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="netzwerk.network" Name="Netzwerk" Repeating="No">
 		<ItemRef ItemOID="network" Mandatory="No" redcap:Variable="network"/>
@@ -97,10 +98,18 @@
 	<ItemGroupDef OID="status.bc_date" Name="Broad Consent / Teilnahmeerklärung" Repeating="No">
 		<ItemRef ItemOID="bc_date" Mandatory="No" redcap:Variable="bc_date"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="status.particip_4" Name="Status" Repeating="No">
+	<ItemGroupDef OID="status.datum_teilnahme" Name="Teilnahmeerklärung" Repeating="No">
+		<ItemRef ItemOID="datum_teilnahme" Mandatory="Yes" redcap:Variable="datum_teilnahme"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="status.version_teilnahme" Name="Status" Repeating="No">
+		<ItemRef ItemOID="version_teilnahme" Mandatory="Yes" redcap:Variable="version_teilnahme"/>
 		<ItemRef ItemOID="particip_4" Mandatory="Yes" redcap:Variable="particip_4"/>
 		<ItemRef ItemOID="particip_4_1" Mandatory="Yes" redcap:Variable="particip_4_1"/>
 		<ItemRef ItemOID="particip_4_2" Mandatory="Yes" redcap:Variable="particip_4_2"/>
+		<ItemRef ItemOID="datum_kuendigung_te" Mandatory="No" redcap:Variable="datum_kuendigung_te"/>
+		<ItemRef ItemOID="kuendigung_seq" Mandatory="No" redcap:Variable="kuendigung_seq"/>
+		<ItemRef ItemOID="kuendigung_austausch" Mandatory="No" redcap:Variable="kuendigung_austausch"/>
+		<ItemRef ItemOID="kuendigung_kontakt" Mandatory="No" redcap:Variable="kuendigung_kontakt"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="status.seq_mode" Name="Sequenzierung" Repeating="No">
 		<ItemRef ItemOID="seq_mode" Mandatory="No" redcap:Variable="seq_mode"/>
@@ -161,9 +170,9 @@
 	<ItemDef OID="kvnr" Name="kvnr" DataType="text" Length="999" redcap:Variable="kvnr" redcap:FieldType="text" redcap:SectionHeader="Krankenversichertennummer" redcap:RequiredField="y">
 		<Question><TranslatedText>KVNR unveränderbarer Teil</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="stammdaten_complete" Name="stammdaten_complete" DataType="text" Length="1" redcap:Variable="stammdaten_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+	<ItemDef OID="id_complete" Name="id_complete" DataType="text" Length="1" redcap:Variable="id_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
 		<Question><TranslatedText>Complete?</TranslatedText></Question>
-		<CodeListRef CodeListOID="stammdaten_complete.choices"/>
+		<CodeListRef CodeListOID="id_complete.choices"/>
 	</ItemDef>
 	<ItemDef OID="network" Name="network" DataType="text" Length="2" redcap:Variable="network" redcap:FieldType="select" redcap:FieldAnnotation="// Liste der internen Bezeichungen der Netzwerke, bitte anpassen!">
 		<Question><TranslatedText>Netzwerk</TranslatedText></Question>
@@ -200,20 +209,38 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 	<ItemDef OID="bc_date" Name="bc_date" DataType="date" Length="999" redcap:Variable="bc_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:SectionHeader="Broad Consent / Teilnahmeerklärung" redcap:FieldAnnotation="wird manuell eingetragen">
 		<Question><TranslatedText>Broad Consent vorgelegt am:</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="particip_4" Name="particip_4" DataType="text" Length="1" redcap:Variable="particip_4" redcap:FieldType="select" redcap:RequiredField="y" redcap:FieldAnnotation="# Infos aus Teilnahmeerklärung Frage 4 (Import aus PMD UKBGENOM)
-@READONLY">
-		<Question><TranslatedText>4. Erklärung zur Teilnahme am Modellvorhaben und Zustimmung zur Genomsequenzierung</TranslatedText></Question>
+	<ItemDef OID="datum_teilnahme" Name="datum_teilnahme" DataType="date" Length="999" redcap:Variable="datum_teilnahme" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:SectionHeader="Teilnahmeerklärung" redcap:RequiredField="y">
+		<Question><TranslatedText>Datum der Teilnahmeerklärung</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="version_teilnahme" Name="version_teilnahme" DataType="text" Length="999" redcap:Variable="version_teilnahme" redcap:FieldType="text" redcap:RequiredField="y" redcap:BranchingLogic="[datum_teilnahme] &lt;&gt; &#039;&#039;" redcap:FieldAnnotation="@DEFAULT=&#039;BfArM 26.08.2024&#039;">
+		<Question><TranslatedText>Version der Teilnahmeerklärung</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="particip_4" Name="particip_4" DataType="text" Length="1" redcap:Variable="particip_4" redcap:FieldType="radio" redcap:RequiredField="y" redcap:BranchingLogic="[datum_teilnahme] &lt;&gt; &#039;&#039;">
+		<Question><TranslatedText>Erklärung zur Teilnahme am Modellvorhaben und Einwilligung zur Genomsequenzierung</TranslatedText></Question>
 		<CodeListRef CodeListOID="particip_4.choices"/>
 	</ItemDef>
-	<ItemDef OID="particip_4_1" Name="particip_4_1" DataType="text" Length="1" redcap:Variable="particip_4_1" redcap:FieldType="select" redcap:RequiredField="y" redcap:FieldAnnotation="# Infos aus Teilnahmeerklärung Frage 4.1 (Import aus PMD UKBGENOM)
-@READONLY">
-		<Question><TranslatedText>4.1 Einwilligung zur Fallidentifizierung zum fachlichen Austausch unter Behandlern</TranslatedText></Question>
+	<ItemDef OID="particip_4_1" Name="particip_4_1" DataType="text" Length="1" redcap:Variable="particip_4_1" redcap:FieldType="radio" redcap:RequiredField="y" redcap:BranchingLogic="[datum_teilnahme] &lt;&gt; &#039;&#039;">
+		<Question><TranslatedText>Einwilligung zur Fallidentifizierung zum fachlichen Austausch unter Behandlern</TranslatedText></Question>
 		<CodeListRef CodeListOID="particip_4_1.choices"/>
 	</ItemDef>
-	<ItemDef OID="particip_4_2" Name="particip_4_2" DataType="text" Length="1" redcap:Variable="particip_4_2" redcap:FieldType="select" redcap:RequiredField="y" redcap:FieldAnnotation="# Infos aus Teilnahmeerklärung Frage 4.2 (Import aus PMD UKBGENOM)
-@READONLY">
-		<Question><TranslatedText>4.2 Einwilligung zur Re-Identifizierung Ihrer Daten und zur Kontaktaufnahme bei einem Befund in der Forschung</TranslatedText></Question>
+	<ItemDef OID="particip_4_2" Name="particip_4_2" DataType="text" Length="1" redcap:Variable="particip_4_2" redcap:FieldType="radio" redcap:RequiredField="y" redcap:BranchingLogic="[datum_teilnahme] &lt;&gt; &#039;&#039;">
+		<Question><TranslatedText>Einwilligung zur Re-Identifizierung der Versichertendaten und zur Kontaktaufnahme bei einem neuen Befund in der Forschung</TranslatedText></Question>
 		<CodeListRef CodeListOID="particip_4_2.choices"/>
+	</ItemDef>
+	<ItemDef OID="datum_kuendigung_te" Name="datum_kuendigung_te" DataType="date" Length="999" redcap:Variable="datum_kuendigung_te" redcap:FieldType="text" redcap:TextValidationType="date_dmy">
+		<Question><TranslatedText>Datum der Kündigung der Teilnahmeerklärung</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="kuendigung_seq" Name="kuendigung_seq" DataType="text" Length="1" redcap:Variable="kuendigung_seq" redcap:FieldType="radio" redcap:BranchingLogic="[datum_kuendigung_te] &lt;&gt; &#039;&#039;">
+		<Question><TranslatedText>Kündigung der Erklärung zur Teilnahme am Modellvorhaben und Einwilligung zur Genomsequenzierung</TranslatedText></Question>
+		<CodeListRef CodeListOID="kuendigung_seq.choices"/>
+	</ItemDef>
+	<ItemDef OID="kuendigung_austausch" Name="kuendigung_austausch" DataType="text" Length="1" redcap:Variable="kuendigung_austausch" redcap:FieldType="radio" redcap:BranchingLogic="[datum_kuendigung_te] &lt;&gt; &#039;&#039;">
+		<Question><TranslatedText>Kündigung der Einwilligung zur Fallidentifizierung zum fachlichen Austausch unter Behandlern</TranslatedText></Question>
+		<CodeListRef CodeListOID="kuendigung_austausch.choices"/>
+	</ItemDef>
+	<ItemDef OID="kuendigung_kontakt" Name="kuendigung_kontakt" DataType="text" Length="1" redcap:Variable="kuendigung_kontakt" redcap:FieldType="radio" redcap:BranchingLogic="[datum_kuendigung_te] &lt;&gt; &#039;&#039;">
+		<Question><TranslatedText>Kündigung der Einwilligung zur Re-Identifizierung der Versichertendaten und zur Kontaktaufnahme bei einem neuen Befund in der Forschung</TranslatedText></Question>
+		<CodeListRef CodeListOID="kuendigung_kontakt.choices"/>
 	</ItemDef>
 	<ItemDef OID="seq_mode" Name="seq_mode" DataType="text" Length="1" redcap:Variable="seq_mode" redcap:FieldType="select" redcap:SectionHeader="Sequenzierung">
 		<Question><TranslatedText>Sequenzierungsart</TranslatedText></Question>
@@ -287,7 +314,7 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<Question><TranslatedText>Complete?</TranslatedText></Question>
 		<CodeListRef CodeListOID="fallnummer_complete.choices"/>
 	</ItemDef>
-	<CodeList OID="stammdaten_complete.choices" Name="stammdaten_complete" DataType="text" redcap:Variable="stammdaten_complete">
+	<CodeList OID="id_complete.choices" Name="id_complete" DataType="text" redcap:Variable="id_complete">
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
@@ -325,16 +352,28 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<CodeListItem CodedValue="7"><Decode><TranslatedText>Follow-Up</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="particip_4.choices" Name="particip_4" DataType="text" redcap:Variable="particip_4">
-		<CodeListItem CodedValue="1"><Decode><TranslatedText>ja</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="0"><Decode><TranslatedText>nein</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Ja</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Nein</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="particip_4_1.choices" Name="particip_4_1" DataType="text" redcap:Variable="particip_4_1">
-		<CodeListItem CodedValue="1"><Decode><TranslatedText>ja</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="0"><Decode><TranslatedText>nein</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Ja</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Nein</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="particip_4_2.choices" Name="particip_4_2" DataType="text" redcap:Variable="particip_4_2">
-		<CodeListItem CodedValue="1"><Decode><TranslatedText>ja</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="0"><Decode><TranslatedText>nein</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Ja</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Nein</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="kuendigung_seq.choices" Name="kuendigung_seq" DataType="text" redcap:Variable="kuendigung_seq">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Ja</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Nein</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="kuendigung_austausch.choices" Name="kuendigung_austausch" DataType="text" redcap:Variable="kuendigung_austausch">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Ja</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Nein</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="kuendigung_kontakt.choices" Name="kuendigung_kontakt" DataType="text" redcap:Variable="kuendigung_kontakt">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Ja</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Nein</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="seq_mode.choices" Name="seq_mode" DataType="text" redcap:Variable="seq_mode">
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Keine</TranslatedText></Decode></CodeListItem>
