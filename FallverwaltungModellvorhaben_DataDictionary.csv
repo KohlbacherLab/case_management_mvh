@@ -1,13 +1,13 @@
 ﻿"Variable / Field Name";"Form Name";"Section Header";"Field Type";"Field Label";"Choices, Calculations, OR Slider Labels";"Field Note";"Text Validation Type OR Show Slider Number";"Text Validation Min";"Text Validation Max";Identifier?;"Branching Logic (Show field only if...)";"Required Field?";"Custom Alignment";"Question Number (surveys only)";"Matrix Group Name";"Matrix Ranking?";"Field Annotation"
 record_id;id;;text;ID;;;;;;;;;;;;;
-pat_id;id;;text;SAP-ID;;;;;;;;y;;;;;"# ID des Patienten im Primärsystem (wird automatisch importiert)
-@READONLY"
+psn;id;;text;Pseudonym;;;;;;;;;;;;;
+pat_id;id;;text;SAP-ID;;;;;;;;y;;;;;"# ID des Patienten im Primärsystem (wird automatisch importiert)"
 fallnummern_desc;id;;descriptive;Fallnummern;;;;;;;;;;;;;" @INSTANCETABLE=fallnummer
 @INSTANCETABLE_VARLIST=case_id
 @INSTANCETABLE_HIDEINSTANCECOL
 @INSTANCETABLE_ADDBTNLABEL='Neue Fallnummer'"
 kvnr;id;Krankenversichertennummer;text;"KVNR unveränderbarer Teil";;;;;;;;y;;;;;
-network;netzwerk;;dropdown;Netzwerk;"1, UKT-2024-ZE1-2973 | 2, UKT-2024-IM1-2975 | 3, UKT-2024-IM1-2976 | 4, UKT-2024-IM1-2977 | 5, UKT-2024-AH3-2971 | 6, UKT-2024-AH3-2972 | 7, UKT-2024-AH3-2974 | 8, ohne Zuordnung | 9, UKT-2023-IM1-2739 | 10, UKT-2017-NE6-2572";;;;;;;;;;;;"// Liste der internen Bezeichungen der Netzwerke, bitte anpassen!"
+network;netzwerk;;dropdown;Netzwerk;"1, UKT-2024-ZE1-2973 | 2, UKT-2024-IM1-2975 | 3, UKT-2024-IM1-2976 | 4, UKT-2024-IM1-2977 | 5, UKT-2024-AH3-2971 | 6, UKT-2024-AH3-2972 | 7, UKT-2024-AH3-2974";;;;;;;;;;;;"// Liste der internen Bezeichungen der Netzwerke, bitte anpassen!"
 network_title;netzwerk;;text;"Netzwerk Titel";;;;;;;;;;;;;"// Anzeige der Bezeichnungen der Netzwerke auf Grundlage des Codes des Netzwerks
 @CALCTEXT(if([network]='1', 'Netzwerk Seltene Erkrankungen', 
 if([network]='2', 'Deutsches Netzwerk für Personalisierte Medizin', 
@@ -20,9 +20,9 @@ department;netzwerk;;dropdown;Abteilung;"1, IM1 | 2, AH3 | 3, ZE1";;;;;;;;;;;;"/
 status_study;status;;dropdown;"Status Studienteilnahme";"0, Keine Angabe | 1, Vorgemerkt | 2, Rekrutiert | 3, Aktiv | 4, Unterbrochen | 5, Abgebrochen | 6, Abgeschlossen | 7, Follow-Up";;;;;;;y;;;;;
 start_study_date;status;;text;"Beginn Studienbehandlung";;;date_dmy;;;;;;;;;;
 end_study_date;status;;text;"Ende Studienbehandlung";;;date_dmy;;;;;;;;;;
-bc_date;status;"Broad Consent / Teilnahmeerklärung";text;"Broad Consent vorgelegt am:";;;date_dmy;;;;;;;;;;"wird manuell eingetragen"
+bc_date;status;"Broad Consent / Teilnahmeerklärung";text;"Broad Consent vorgelegt am:";;;date_dmy;;;;;y;;;;;"wird manuell eingetragen"
 datum_teilnahme;status;Teilnahmeerklärung;text;"Datum der Teilnahmeerklärung";;;date_dmy;;;;;y;;;;;
-version_teilnahme;status;;text;"Version der Teilnahmeerklärung";;;;;;;"[datum_teilnahme] <> ''";y;;;;;" @DEFAULT='BfArM 26.08.2024'"
+version_teilnahme;status;;text;"Version der Teilnahmeerklärung";;;;;;;"[datum_teilnahme] <> ''";y;;;;;" @IF([version_teilnahme] = '',@SETVALUE='BfArM 26.08.2024','')"
 particip_4;status;;radio;"Erklärung zur Teilnahme am Modellvorhaben und Einwilligung zur Genomsequenzierung";"1, Ja | 0, Nein";;;;;;"[datum_teilnahme] <> ''";y;;;;;
 particip_4_1;status;;radio;"Einwilligung zur Fallidentifizierung zum fachlichen Austausch unter Behandlern";"1, Ja | 0, Nein";;;;;;"[datum_teilnahme] <> ''";y;;;;;
 particip_4_2;status;;radio;"Einwilligung zur Re-Identifizierung der Versichertendaten und zur Kontaktaufnahme bei einem neuen Befund in der Forschung";"1, Ja | 0, Nein";;;;;;"[datum_teilnahme] <> ''";y;;;;;
@@ -39,6 +39,9 @@ cancelled_date;status;;text;"Datum Abgebrochen";;;date_dmy;;;;"[seq_state] > 3";
 case_state;status;Status;dropdown;Fallstatus;"1, offen | 2, abgerechnet | 3, follow-up | 4, lost-to-followup";;;;;;;y;;;;;
 billing_date;status;;text;Abrechnungsdatum;;;date_dmy;;;;"[case_state] = '2'";y;;;;;
 case_lost_fu_date;status;;text;"Datum Lost-to-followup";;;date_dmy;;;;"[case_state] = '4'";y;;;;;
+pruefberichte_desc;status;Prüfberichte;descriptive;;;;;;;;;;;;;;" @INSTANCETABLE=pruefbericht
+@INSTANCETABLE_HIDEINSTANCECOL
+@INSTANCETABLE_ADDBTNLABEL='Neuer Prüfbericht'"
 case_id_vn;pruefbericht;;text;Fallnummer;;;;;;;;y;;;;;" @FORMINSTANCE=fallnummer"
 report_t_vn;pruefbericht;;text;Vorgangsnummer;;;;;;;;y;;;;;"# Prüfbericht: localCaseID"
 report_data_type;pruefbericht;;dropdown;"Typ der Daten";"G, genomisch | K, klinisch";;;;;;;y;;;;;"Prüfbericht: dataCategory"
