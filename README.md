@@ -13,7 +13,7 @@ Die Projekteinstellungen müssen dann allerdings manuell vorgenommen werden, v.a
 ![Module](mvh_case_repeated.png)
 
 Zur einfacheren Bedienung werden externe Module eingesetzt (optional). Falls gewünscht, müssen diese von einem REDCap Administrator im Kontrollzentrum installiert und im Projekt aktiviert werden:
-- Auto Populate Fields: Unterdrückung der Fehlermeldung für versteckte Voragabe-Werte (@DEFAULT "Version der Teilnahmeerklärung")
+- Auto Populate Fields: Unterdrückung der Fehlermeldung für versteckte Vorgabe-Werte (@DEFAULT "Version der Teilnahmeerklärung")
 - Instance Select: Auswahl einer Fallnummer für Datenupload
 - Instance Table: Eingabe mehrerer Fallnummern pro Patient
 - Orca Search Module: Suchmaske für verschiedene Felder. ([ZIP Datei zum Import der Einstellungen](FallverwaltungModellvorhaben_ModuleSettingsExport.zip))
