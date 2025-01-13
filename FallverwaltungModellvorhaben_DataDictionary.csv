@@ -22,6 +22,7 @@ start_study_date;status;;text;"Beginn Studienbehandlung";;;date_dmy;;;;;;;;;;
 end_study_date;status;;text;"Ende Studienbehandlung";;;date_dmy;;;;;;;;;;
 bc_date;status;"Broad Consent / Teilnahmeerklärung";text;"Broad Consent vorgelegt am:";;;date_dmy;;;;;y;;;;;"wird manuell eingetragen"
 datum_teilnahme;status;Teilnahmeerklärung;text;"Datum der Teilnahmeerklärung";;;date_dmy;;;;;y;;;;;
+mvconsentpresenteddate;status;;text;"Datum der Aushändigung";;;date_dmy;;;;;y;;;;;
 version_teilnahme;status;;text;"Version der Teilnahmeerklärung";;;;;;;"[datum_teilnahme] <> ''";y;;;;;" @IF([version_teilnahme] = '',@SETVALUE='BfArM 26.08.2024','')"
 particip_4;status;;radio;"Erklärung zur Teilnahme am Modellvorhaben und Einwilligung zur Genomsequenzierung";"1, Ja | 0, Nein";;;;;;"[datum_teilnahme] <> ''";y;;;;;
 particip_4_1;status;;radio;"Einwilligung zur Fallidentifizierung zum fachlichen Austausch unter Behandlern";"1, Ja | 0, Nein";;;;;;"[datum_teilnahme] <> ''";y;;;;;
@@ -46,6 +47,7 @@ case_id_vn;pruefbericht;;text;Fallnummer;;;;;;;;y;;;;;" @FORMINSTANCE=fallnummer
 report_t_vn;pruefbericht;;text;Vorgangsnummer;;;;;;;;y;;;;;"# Prüfbericht: localCaseID"
 report_data_type;pruefbericht;;dropdown;"Typ der Daten";"G, genomisch | K, klinisch";;;;;;;y;;;;;"Prüfbericht: dataCategory"
 report_type;pruefbericht;;dropdown;"Typ der Meldung";"0, Erstmeldung | 1, Nachtrag | 2, Korrektur | 3, Löschung";;;;;;;y;;;;;"Prüfbericht: submissionType"
+coveragetype;pruefbericht;;dropdown;Krankenversicherungsträger;"1, GKV | 2, PKV | 3, PKV/Beihilfe | 4, other";;;;;;;y;;;;;
 report_date;pruefbericht;;text;"Datum der Datenübertragung";;;date_dmy;;;;;y;;;;;"Prüfbericht: submissionDate"
 report_dq;pruefbericht;;dropdown;"Ergebnis der Qualitätskontrolle";"0, Nicht bestanden | 1, Bestanden";;;;;;;y;;;;;"Prüfbericht: dataQualityCheckPassed"
 confirm_code;pruefbericht;Meldebestätigung;text;"Code der Meldebestätigung";;;;;;;;;;;;;"Alphanumerischer Code der Meldebestätigung (10 Zeichen)"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Fallverwaltung Modellvorhaben Genomsequenzierung (github)" AsOfDateTime="2024-11-18T12:30:43" CreationDateTime="2024-11-18T12:30:43" SourceSystem="REDCap" SourceSystemVersion="14.8.0">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Fallverwaltung Modellvorhaben Genomsequenzierung (github)" AsOfDateTime="2025-01-13T15:41:42" CreationDateTime="2025-01-13T15:41:42" SourceSystem="REDCap" SourceSystemVersion="15.0.0">
 <Study OID="Project.FallverwaltungModellvorhabenGe">
 <GlobalVariables>
 	<StudyName>Fallverwaltung Modellvorhaben Genomsequenzierung (github)</StudyName>
@@ -41,7 +41,7 @@
 		<redcap:UserRoles role_name="project manager" unique_role_name="U-264AFMA8AA" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1][pruefbericht,1]" data_import_tool="0" data_comparison_tool="0" data_logging="1" email_logging="1" file_repository="1" double_data="0" user_rights="1" data_access_groups="0" graphical="1" reports="1" design="1" alerts="1" calendar="0" data_entry="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1][pruefbericht,1]" api_export="0" api_import="0" api_modules="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="1" data_quality_execute="1" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
 	</redcap:UserRolesGroup>
 </GlobalVariables>
-<MetaDataVersion OID="Metadata.FallverwaltungModellvorhabenGe_2024-11-18_1230" Name="Fallverwaltung Modellvorhaben Genomsequenzierung (github)" redcap:RecordIdField="record_id">
+<MetaDataVersion OID="Metadata.FallverwaltungModellvorhabenGe_2025-01-13_1541" Name="Fallverwaltung Modellvorhaben Genomsequenzierung (github)" redcap:RecordIdField="record_id">
 	<FormDef OID="Form.id" Name="ID" Repeating="No" redcap:FormName="id">
 		<ItemGroupRef ItemGroupOID="id.record_id" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="id.kvnr" Mandatory="No"/>
@@ -55,7 +55,7 @@
 		<ItemGroupRef ItemGroupOID="status.status_study" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="status.bc_date" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="status.datum_teilnahme" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="status.version_teilnahme" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="status.mvconsentpresenteddate" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="status.seq_mode" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="status.seq_state" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="status.case_state" Mandatory="No"/>
@@ -104,7 +104,8 @@
 	<ItemGroupDef OID="status.datum_teilnahme" Name="Teilnahmeerklärung" Repeating="No">
 		<ItemRef ItemOID="datum_teilnahme" Mandatory="Yes" redcap:Variable="datum_teilnahme"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="status.version_teilnahme" Name="Status" Repeating="No">
+	<ItemGroupDef OID="status.mvconsentpresenteddate" Name="Status" Repeating="No">
+		<ItemRef ItemOID="mvconsentpresenteddate" Mandatory="Yes" redcap:Variable="mvconsentpresenteddate"/>
 		<ItemRef ItemOID="version_teilnahme" Mandatory="Yes" redcap:Variable="version_teilnahme"/>
 		<ItemRef ItemOID="particip_4" Mandatory="Yes" redcap:Variable="particip_4"/>
 		<ItemRef ItemOID="particip_4_1" Mandatory="Yes" redcap:Variable="particip_4_1"/>
@@ -142,6 +143,7 @@
 		<ItemRef ItemOID="report_t_vn" Mandatory="Yes" redcap:Variable="report_t_vn"/>
 		<ItemRef ItemOID="report_data_type" Mandatory="Yes" redcap:Variable="report_data_type"/>
 		<ItemRef ItemOID="report_type" Mandatory="Yes" redcap:Variable="report_type"/>
+		<ItemRef ItemOID="coveragetype" Mandatory="Yes" redcap:Variable="coveragetype"/>
 		<ItemRef ItemOID="report_date" Mandatory="Yes" redcap:Variable="report_date"/>
 		<ItemRef ItemOID="report_dq" Mandatory="Yes" redcap:Variable="report_dq"/>
 	</ItemGroupDef>
@@ -219,6 +221,9 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 	</ItemDef>
 	<ItemDef OID="datum_teilnahme" Name="datum_teilnahme" DataType="date" Length="999" redcap:Variable="datum_teilnahme" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:SectionHeader="Teilnahmeerklärung" redcap:RequiredField="y">
 		<Question><TranslatedText>Datum der Teilnahmeerklärung</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="mvconsentpresenteddate" Name="mvconsentpresenteddate" DataType="date" Length="999" redcap:Variable="mvconsentpresenteddate" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:RequiredField="y">
+		<Question><TranslatedText>Datum der Aushändigung</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="version_teilnahme" Name="version_teilnahme" DataType="text" Length="999" redcap:Variable="version_teilnahme" redcap:FieldType="text" redcap:RequiredField="y" redcap:BranchingLogic="[datum_teilnahme] &lt;&gt; &#039;&#039;" redcap:FieldAnnotation="@IF([version_teilnahme] = &#039;&#039;,@SETVALUE=&#039;BfArM 26.08.2024&#039;,&#039;&#039;)">
 		<Question><TranslatedText>Version der Teilnahmeerklärung</TranslatedText></Question>
@@ -302,6 +307,10 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 	<ItemDef OID="report_type" Name="report_type" DataType="text" Length="1" redcap:Variable="report_type" redcap:FieldType="select" redcap:RequiredField="y" redcap:FieldAnnotation="Prüfbericht: submissionType">
 		<Question><TranslatedText>Typ der Meldung</TranslatedText></Question>
 		<CodeListRef CodeListOID="report_type.choices"/>
+	</ItemDef>
+	<ItemDef OID="coveragetype" Name="coveragetype" DataType="text" Length="1" redcap:Variable="coveragetype" redcap:FieldType="select" redcap:RequiredField="y">
+		<Question><TranslatedText>Krankenversicherungsträger</TranslatedText></Question>
+		<CodeListRef CodeListOID="coveragetype.choices"/>
 	</ItemDef>
 	<ItemDef OID="report_date" Name="report_date" DataType="date" Length="999" redcap:Variable="report_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:RequiredField="y" redcap:FieldAnnotation="Prüfbericht: submissionDate">
 		<Question><TranslatedText>Datum der Datenübertragung</TranslatedText></Question>
@@ -417,6 +426,12 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>Nachtrag</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="2"><Decode><TranslatedText>Korrektur</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="3"><Decode><TranslatedText>Löschung</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="coveragetype.choices" Name="coveragetype" DataType="text" redcap:Variable="coveragetype">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>GKV</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>PKV</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>PKV/Beihilfe</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>other</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="report_dq.choices" Name="report_dq" DataType="text" redcap:Variable="report_dq">
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Nicht bestanden</TranslatedText></Decode></CodeListItem>
