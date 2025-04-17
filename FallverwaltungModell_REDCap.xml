@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Fallverwaltung Modellvorhaben Genomsequenzierung (github)" AsOfDateTime="2025-01-13T15:41:42" CreationDateTime="2025-01-13T15:41:42" SourceSystem="REDCap" SourceSystemVersion="15.0.0">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Fallverwaltung Modellvorhaben Genomsequenzierung (github)" AsOfDateTime="2025-04-17T10:10:20" CreationDateTime="2025-04-17T10:10:20" SourceSystem="REDCap" SourceSystemVersion="15.0.19">
 <Study OID="Project.FallverwaltungModellvorhabenGe">
 <GlobalVariables>
 	<StudyName>Fallverwaltung Modellvorhaben Genomsequenzierung (github)</StudyName>
@@ -20,6 +20,9 @@
 	<redcap:DataHistoryPopup>1</redcap:DataHistoryPopup>
 	<redcap:OrderRecordsByField></redcap:OrderRecordsByField>
 	<redcap:taskCompleteStatus>0</redcap:taskCompleteStatus>
+	<redcap:DataResolutionWorkflowEnabled>1</redcap:DataResolutionWorkflowEnabled>
+	<redcap:FieldCommentLogOptionEditDelete>1</redcap:FieldCommentLogOptionEditDelete>
+	<redcap:DataResolutionWorkflowHideClosedQueries>1</redcap:DataResolutionWorkflowHideClosedQueries>
 	<redcap:MyCapEnabled>0</redcap:MyCapEnabled>
 	<redcap:Purpose>4</redcap:Purpose>
 	<redcap:PurposeOther></redcap:PurposeOther>
@@ -41,7 +44,7 @@
 		<redcap:UserRoles role_name="project manager" unique_role_name="U-264AFMA8AA" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1][pruefbericht,1]" data_import_tool="0" data_comparison_tool="0" data_logging="1" email_logging="1" file_repository="1" double_data="0" user_rights="1" data_access_groups="0" graphical="1" reports="1" design="1" alerts="1" calendar="0" data_entry="[stammdaten,1][netzwerk,1][status,1][datenupload,1][fallnummer,1][pruefbericht,1]" api_export="0" api_import="0" api_modules="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="1" data_quality_execute="1" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
 	</redcap:UserRolesGroup>
 </GlobalVariables>
-<MetaDataVersion OID="Metadata.FallverwaltungModellvorhabenGe_2025-01-13_1541" Name="Fallverwaltung Modellvorhaben Genomsequenzierung (github)" redcap:RecordIdField="record_id">
+<MetaDataVersion OID="Metadata.FallverwaltungModellvorhabenGe_2025-04-17_1010" Name="Fallverwaltung Modellvorhaben Genomsequenzierung (github)" redcap:RecordIdField="record_id">
 	<FormDef OID="Form.id" Name="ID" Repeating="No" redcap:FormName="id">
 		<ItemGroupRef ItemGroupOID="id.record_id" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="id.kvnr" Mandatory="No"/>
@@ -308,7 +311,7 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<Question><TranslatedText>Typ der Meldung</TranslatedText></Question>
 		<CodeListRef CodeListOID="report_type.choices"/>
 	</ItemDef>
-	<ItemDef OID="coveragetype" Name="coveragetype" DataType="text" Length="1" redcap:Variable="coveragetype" redcap:FieldType="select" redcap:RequiredField="y">
+	<ItemDef OID="coveragetype" Name="coveragetype" DataType="text" Length="3" redcap:Variable="coveragetype" redcap:FieldType="select" redcap:RequiredField="y">
 		<Question><TranslatedText>Krankenversicherungsträger</TranslatedText></Question>
 		<CodeListRef CodeListOID="coveragetype.choices"/>
 	</ItemDef>
@@ -428,10 +431,16 @@ if([network]=&#039;7&#039;, &#039;Netzwerk Erbliche Tumorerkrankungen&#039;, &#0
 		<CodeListItem CodedValue="3"><Decode><TranslatedText>Löschung</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="coveragetype.choices" Name="coveragetype" DataType="text" redcap:Variable="coveragetype">
-		<CodeListItem CodedValue="1"><Decode><TranslatedText>GKV</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="2"><Decode><TranslatedText>PKV</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="3"><Decode><TranslatedText>PKV/Beihilfe</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="4"><Decode><TranslatedText>other</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="GKV"><Decode><TranslatedText>gesetzliche Krankenversicherung</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="PKV"><Decode><TranslatedText>private Krankenversicherung</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="BG"><Decode><TranslatedText>Berufsgenossenschaft</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="SEL"><Decode><TranslatedText>Selbstzahler</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="SOZ"><Decode><TranslatedText>Sozialamt</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="GPV"><Decode><TranslatedText>gesetzliche Pflegeversicherung</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="PPV"><Decode><TranslatedText>private Pflegeversicherung</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="BEI"><Decode><TranslatedText>Beihilfe</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="SKT"><Decode><TranslatedText>sonstiger Kostenträger</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="UNK"><Decode><TranslatedText>unknown</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="report_dq.choices" Name="report_dq" DataType="text" redcap:Variable="report_dq">
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Nicht bestanden</TranslatedText></Decode></CodeListItem>

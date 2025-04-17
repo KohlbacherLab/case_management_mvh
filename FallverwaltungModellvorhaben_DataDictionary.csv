@@ -47,7 +47,7 @@ case_id_vn;pruefbericht;;text;Fallnummer;;;;;;;;y;;;;;" @FORMINSTANCE=fallnummer
 report_t_vn;pruefbericht;;text;Vorgangsnummer;;;;;;;;y;;;;;"# Prüfbericht: localCaseID"
 report_data_type;pruefbericht;;dropdown;"Typ der Daten";"G, genomisch | K, klinisch";;;;;;;y;;;;;"Prüfbericht: dataCategory"
 report_type;pruefbericht;;dropdown;"Typ der Meldung";"0, Erstmeldung | 1, Nachtrag | 2, Korrektur | 3, Löschung";;;;;;;y;;;;;"Prüfbericht: submissionType"
-coveragetype;pruefbericht;;dropdown;Krankenversicherungsträger;"1, GKV | 2, PKV | 3, PKV/Beihilfe | 4, other";;;;;;;y;;;;;
+coveragetype;pruefbericht;;dropdown;Krankenversicherungsträger;"GKV, gesetzliche Krankenversicherung | PKV, private Krankenversicherung | BG, Berufsgenossenschaft | SEL, Selbstzahler | SOZ, Sozialamt | GPV, gesetzliche Pflegeversicherung | PPV, private Pflegeversicherung | BEI, Beihilfe | SKT, sonstiger Kostenträger | UNK, unknown";;;;;;;y;;;;;
 report_date;pruefbericht;;text;"Datum der Datenübertragung";;;date_dmy;;;;;y;;;;;"Prüfbericht: submissionDate"
 report_dq;pruefbericht;;dropdown;"Ergebnis der Qualitätskontrolle";"0, Nicht bestanden | 1, Bestanden";;;;;;;y;;;;;"Prüfbericht: dataQualityCheckPassed"
 confirm_code;pruefbericht;Meldebestätigung;text;"Code der Meldebestätigung";;;;;;;;;;;;;"Alphanumerischer Code der Meldebestätigung (10 Zeichen)"
