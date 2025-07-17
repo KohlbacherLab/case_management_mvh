@@ -2,11 +2,10 @@
 record_id;id;;text;ID;;;;;;;;;;;;;
 psn;id;;text;Pseudonym;;;;;;;;;;;;;
 pat_id;id;;text;SAP-ID;;;;;;;;y;;;;;"# ID des Patienten im Primärsystem (wird automatisch importiert)"
-fallnummern_desc;id;;descriptive;Fallnummern;;;;;;;;;;;;;" @INSTANCETABLE=fallnummer
-@INSTANCETABLE_VARLIST=case_id
-@INSTANCETABLE_HIDEINSTANCECOL
-@INSTANCETABLE_ADDBTNLABEL='Neue Fallnummer'"
+case_id;id;;text;Fallnummer;;;;;;;;y;;;;;"Fallnummer des Patienten im Primärsystem: manuell / API"
 kvnr;id;Krankenversichertennummer;text;"KVNR unveränderbarer Teil";;;;;;;;y;;;;;
+coveragetype;id;;dropdown;Krankenversicherungsträger;"GKV, gesetzliche Krankenversicherung | PKV, private Krankenversicherung | BG, Berufsgenossenschaft | SEL, Selbstzahler | SOZ, Sozialamt | GPV, gesetzliche Pflegeversicherung | PPV, private Pflegeversicherung | BEI, Beihilfe | SKT, sonstiger Kostenträger | UNK, unknown";;;;;;;y;;;;;
+ik;id;;text;"Institutionskennzeichen der KV";;;integer;;;;;;;;;;
 network;netzwerk;;dropdown;Netzwerk;"1, UKT-2024-ZE1-2973 | 2, UKT-2024-IM1-2975 | 3, UKT-2024-IM1-2976 | 4, UKT-2024-IM1-2977 | 5, UKT-2024-AH3-2971 | 6, UKT-2024-AH3-2972 | 7, UKT-2024-AH3-2974";;;;;;;;;;;;"// Liste der internen Bezeichungen der Netzwerke, bitte anpassen!"
 network_title;netzwerk;;text;"Netzwerk Titel";;;;;;;;;;;;;"// Anzeige der Bezeichnungen der Netzwerke auf Grundlage des Codes des Netzwerks
 @CALCTEXT(if([network]='1', 'Netzwerk Seltene Erkrankungen', 
@@ -21,6 +20,7 @@ status_study;status;;dropdown;"Status Studienteilnahme";"0, Keine Angabe | 1, Vo
 start_study_date;status;;text;"Beginn Studienbehandlung";;;date_dmy;;;;;;;;;;
 end_study_date;status;;text;"Ende Studienbehandlung";;;date_dmy;;;;;;;;;;
 bc_date;status;"Broad Consent / Teilnahmeerklärung";text;"Broad Consent vorgelegt am:";;;date_dmy;;;;;y;;;;;"wird manuell eingetragen"
+bc_signed;status;;radio;"Broad Consent unterzeichnet:";"1, Ja | 0, Nein";;;;;;;y;;;;;
 datum_teilnahme;status;Teilnahmeerklärung;text;"Datum der Teilnahmeerklärung";;;date_dmy;;;;;y;;;;;
 mvconsentpresenteddate;status;;text;"Datum der Aushändigung";;;date_dmy;;;;;y;;;;;
 version_teilnahme;status;;text;"Version der Teilnahmeerklärung";;;;;;;"[datum_teilnahme] <> ''";y;;;;;" @IF([version_teilnahme] = '',@SETVALUE='BfArM 26.08.2024','')"
@@ -43,13 +43,10 @@ case_lost_fu_date;status;;text;"Datum Lost-to-followup";;;date_dmy;;;;"[case_sta
 pruefberichte_desc;status;Prüfberichte;descriptive;;;;;;;;;;;;;;" @INSTANCETABLE=pruefbericht
 @INSTANCETABLE_HIDEINSTANCECOL
 @INSTANCETABLE_ADDBTNLABEL='Neuer Prüfbericht'"
-case_id_vn;pruefbericht;;text;Fallnummer;;;;;;;;y;;;;;" @FORMINSTANCE=fallnummer"
 report_t_vn;pruefbericht;;text;Vorgangsnummer;;;;;;;;y;;;;;"# Prüfbericht: localCaseID"
 report_data_type;pruefbericht;;dropdown;"Typ der Daten";"G, genomisch | K, klinisch";;;;;;;y;;;;;"Prüfbericht: dataCategory"
 report_type;pruefbericht;;dropdown;"Typ der Meldung";"0, Erstmeldung | 1, Nachtrag | 2, Korrektur | 3, Löschung";;;;;;;y;;;;;"Prüfbericht: submissionType"
-coveragetype;pruefbericht;;dropdown;Krankenversicherungsträger;"GKV, gesetzliche Krankenversicherung | PKV, private Krankenversicherung | BG, Berufsgenossenschaft | SEL, Selbstzahler | SOZ, Sozialamt | GPV, gesetzliche Pflegeversicherung | PPV, private Pflegeversicherung | BEI, Beihilfe | SKT, sonstiger Kostenträger | UNK, unknown";;;;;;;y;;;;;
 report_date;pruefbericht;;text;"Datum der Datenübertragung";;;date_dmy;;;;;y;;;;;"Prüfbericht: submissionDate"
 report_dq;pruefbericht;;dropdown;"Ergebnis der Qualitätskontrolle";"0, Nicht bestanden | 1, Bestanden";;;;;;;y;;;;;"Prüfbericht: dataQualityCheckPassed"
 confirm_code;pruefbericht;Meldebestätigung;text;"Code der Meldebestätigung";;;;;;;;;;;;;"Alphanumerischer Code der Meldebestätigung (10 Zeichen)"
 confirm_date;pruefbericht;;text;"Datum der Meldebestätigung";;;date_dmy;;;;;;;;;;
-case_id;fallnummer;;text;Fallnummer;;;;;;;;y;;;;;"Fallnummer des Patienten im Primärsystem: manuell / API"
